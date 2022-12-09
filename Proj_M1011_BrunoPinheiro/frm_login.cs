@@ -26,7 +26,6 @@ namespace Proj_M1011_BrunoPinheiro
         public frm_login()
         {
             InitializeComponent();
-            Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 12, 12));
         }
 
         private void pnl_top_MouseMove(object sender, MouseEventArgs e)
@@ -135,6 +134,11 @@ namespace Proj_M1011_BrunoPinheiro
             frm_signin frm_signin = new frm_signin();
             frm_signin.Show();
             this.Hide();
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
