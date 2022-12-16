@@ -34,8 +34,8 @@
             this.btn_no = new System.Windows.Forms.Button();
             this.pnl_top = new System.Windows.Forms.Panel();
             this.lbl_name = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btn_close = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -114,16 +114,6 @@
             this.lbl_name.MouseLeave += new System.EventHandler(this.lbl_name_MouseLeave);
             this.lbl_name.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbl_name_MouseMove);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.info;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 66);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 58);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
-            // 
             // btn_close
             // 
             this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -139,6 +129,16 @@
             this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
             this.btn_close.MouseLeave += new System.EventHandler(this.btn_close_MouseLeave);
             this.btn_close.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_close_MouseMove);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.info;
+            this.pictureBox1.Location = new System.Drawing.Point(6, 66);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(63, 58);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // frm_sair
             // 
@@ -157,7 +157,8 @@
             this.MaximizeBox = false;
             this.Name = "frm_sair";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "frm_sair";
+            this.Text = "Jordan - Sair";
+            this.Load += new System.EventHandler(this.frm_sair_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_autor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_autor.Designer.cs">
+      <DependentUpon>frm_autor.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -72,6 +78,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_autor.resx">
+      <DependentUpon>frm_autor.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
     </EmbeddedResource>
@@ -172,6 +181,33 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\584292c4a6515b1e0ad75aca1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jordan2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jordan3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jordan4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jordan5.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jordan6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jordan51.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jordan61.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jordan7.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jordan8.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
