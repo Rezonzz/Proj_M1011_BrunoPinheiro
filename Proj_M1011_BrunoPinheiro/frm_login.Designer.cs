@@ -162,9 +162,9 @@
             // 
             this.txt_password.BackColor = System.Drawing.Color.White;
             this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_password.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.Color.Black;
-            this.txt_password.Location = new System.Drawing.Point(91, 321);
+            this.txt_password.Location = new System.Drawing.Point(91, 315);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
@@ -177,9 +177,9 @@
             // 
             this.txt_username.BackColor = System.Drawing.Color.White;
             this.txt_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_username.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.ForeColor = System.Drawing.Color.Black;
-            this.txt_username.Location = new System.Drawing.Point(91, 244);
+            this.txt_username.Location = new System.Drawing.Point(91, 239);
             this.txt_username.Multiline = true;
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(191, 27);
@@ -191,11 +191,11 @@
             this.lbl_limpar.AutoSize = true;
             this.lbl_limpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_limpar.Enabled = false;
-            this.lbl_limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_limpar.Font = new System.Drawing.Font("Futura-Heavy", 9.749998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_limpar.ForeColor = System.Drawing.Color.Black;
             this.lbl_limpar.Location = new System.Drawing.Point(237, 406);
             this.lbl_limpar.Name = "lbl_limpar";
-            this.lbl_limpar.Size = new System.Drawing.Size(48, 16);
+            this.lbl_limpar.Size = new System.Drawing.Size(44, 16);
             this.lbl_limpar.TabIndex = 54;
             this.lbl_limpar.Text = "Limpar";
             this.lbl_limpar.Visible = false;
@@ -204,11 +204,11 @@
             // 
             this.lbl_sair.AutoSize = true;
             this.lbl_sair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_sair.Font = new System.Drawing.Font("Futura-Heavy", 9.749998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_sair.ForeColor = System.Drawing.Color.Black;
             this.lbl_sair.Location = new System.Drawing.Point(143, 439);
             this.lbl_sair.Name = "lbl_sair";
-            this.lbl_sair.Size = new System.Drawing.Size(31, 16);
+            this.lbl_sair.Size = new System.Drawing.Size(29, 16);
             this.lbl_sair.TabIndex = 53;
             this.lbl_sair.Text = "Sair";
             this.lbl_sair.Click += new System.EventHandler(this.lbl_sair_Click);
@@ -233,11 +233,11 @@
             // lbl_login
             // 
             this.lbl_login.AutoSize = true;
-            this.lbl_login.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_login.Font = new System.Drawing.Font("Akira Expanded", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_login.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_login.Location = new System.Drawing.Point(91, 185);
+            this.lbl_login.Location = new System.Drawing.Point(85, 184);
             this.lbl_login.Name = "lbl_login";
-            this.lbl_login.Size = new System.Drawing.Size(145, 38);
+            this.lbl_login.Size = new System.Drawing.Size(158, 34);
             this.lbl_login.TabIndex = 51;
             this.lbl_login.Text = "LOG IN";
             // 

@@ -39,9 +39,6 @@
             this.pnl_2 = new System.Windows.Forms.Panel();
             this.pnl_1 = new System.Windows.Forms.Panel();
             this.pnl_top = new System.Windows.Forms.Panel();
-            this.pic_logo = new System.Windows.Forms.PictureBox();
-            this.btn_minimize = new System.Windows.Forms.Button();
-            this.btn_close = new System.Windows.Forms.Button();
             this.lbl_name = new System.Windows.Forms.Label();
             this.txt_confimar = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -51,25 +48,28 @@
             this.rad_nao = new System.Windows.Forms.RadioButton();
             this.txt_passe = new System.Windows.Forms.TextBox();
             this.pnl_passe = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pic_passe = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.pic_mostrar = new System.Windows.Forms.PictureBox();
             this.pic_ocultado = new System.Windows.Forms.PictureBox();
             this.pic_password = new System.Windows.Forms.PictureBox();
             this.pic_username = new System.Windows.Forms.PictureBox();
+            this.pic_logo = new System.Windows.Forms.PictureBox();
+            this.btn_minimize = new System.Windows.Forms.Button();
+            this.btn_close = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_passe)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_mostrar)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ocultado)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_password)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -88,9 +88,9 @@
             // 
             this.txt_password.BackColor = System.Drawing.Color.White;
             this.txt_password.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_password.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_password.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_password.ForeColor = System.Drawing.Color.Black;
-            this.txt_password.Location = new System.Drawing.Point(95, 321);
+            this.txt_password.Location = new System.Drawing.Point(95, 316);
             this.txt_password.Multiline = true;
             this.txt_password.Name = "txt_password";
             this.txt_password.PasswordChar = '*';
@@ -103,9 +103,9 @@
             // 
             this.txt_username.BackColor = System.Drawing.Color.White;
             this.txt_username.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_username.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_username.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_username.ForeColor = System.Drawing.Color.Black;
-            this.txt_username.Location = new System.Drawing.Point(95, 244);
+            this.txt_username.Location = new System.Drawing.Point(95, 238);
             this.txt_username.Multiline = true;
             this.txt_username.Name = "txt_username";
             this.txt_username.Size = new System.Drawing.Size(191, 27);
@@ -117,11 +117,11 @@
             this.lbl_limpar.AutoSize = true;
             this.lbl_limpar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.lbl_limpar.Enabled = false;
-            this.lbl_limpar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_limpar.Font = new System.Drawing.Font("Futura-Heavy", 9.749998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_limpar.ForeColor = System.Drawing.Color.Black;
             this.lbl_limpar.Location = new System.Drawing.Point(238, 511);
             this.lbl_limpar.Name = "lbl_limpar";
-            this.lbl_limpar.Size = new System.Drawing.Size(48, 16);
+            this.lbl_limpar.Size = new System.Drawing.Size(44, 16);
             this.lbl_limpar.TabIndex = 70;
             this.lbl_limpar.Text = "Limpar";
             this.lbl_limpar.Visible = false;
@@ -130,11 +130,11 @@
             // 
             this.lbl_sair.AutoSize = true;
             this.lbl_sair.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.lbl_sair.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_sair.Font = new System.Drawing.Font("Futura-Heavy", 9.749998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_sair.ForeColor = System.Drawing.Color.Black;
             this.lbl_sair.Location = new System.Drawing.Point(139, 544);
             this.lbl_sair.Name = "lbl_sair";
-            this.lbl_sair.Size = new System.Drawing.Size(42, 16);
+            this.lbl_sair.Size = new System.Drawing.Size(41, 16);
             this.lbl_sair.TabIndex = 69;
             this.lbl_sair.Text = "Voltar";
             this.lbl_sair.Click += new System.EventHandler(this.lbl_sair_Click);
@@ -158,11 +158,11 @@
             // lbl_login
             // 
             this.lbl_login.AutoSize = true;
-            this.lbl_login.Font = new System.Drawing.Font("Verdana", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_login.Font = new System.Drawing.Font("Akira Expanded", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_login.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_login.Location = new System.Drawing.Point(84, 182);
+            this.lbl_login.Location = new System.Drawing.Point(76, 179);
             this.lbl_login.Name = "lbl_login";
-            this.lbl_login.Size = new System.Drawing.Size(165, 38);
+            this.lbl_login.Size = new System.Drawing.Size(176, 34);
             this.lbl_login.TabIndex = 67;
             this.lbl_login.Text = "SIGN IN";
             // 
@@ -198,50 +198,6 @@
             this.pnl_top.MouseLeave += new System.EventHandler(this.pnl_top_MouseLeave);
             this.pnl_top.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pnl_top_MouseMove);
             // 
-            // pic_logo
-            // 
-            this.pic_logo.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources._584292c4a6515b1e0ad75aca;
-            this.pic_logo.Location = new System.Drawing.Point(11, 3);
-            this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(22, 22);
-            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pic_logo.TabIndex = 31;
-            this.pic_logo.TabStop = false;
-            this.pic_logo.MouseLeave += new System.EventHandler(this.pic_logo_MouseLeave);
-            this.pic_logo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pic_logo_MouseMove);
-            // 
-            // btn_minimize
-            // 
-            this.btn_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_minimize.FlatAppearance.BorderSize = 0;
-            this.btn_minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.btn_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_minimize.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.minus_sign;
-            this.btn_minimize.Location = new System.Drawing.Point(278, 0);
-            this.btn_minimize.Name = "btn_minimize";
-            this.btn_minimize.Size = new System.Drawing.Size(28, 28);
-            this.btn_minimize.TabIndex = 8;
-            this.btn_minimize.UseVisualStyleBackColor = true;
-            this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
-            this.btn_minimize.MouseLeave += new System.EventHandler(this.btn_minimize_MouseLeave);
-            this.btn_minimize.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_minimize_MouseMove);
-            // 
-            // btn_close
-            // 
-            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btn_close.FlatAppearance.BorderSize = 0;
-            this.btn_close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
-            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_close.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.close__4_;
-            this.btn_close.Location = new System.Drawing.Point(306, 0);
-            this.btn_close.Name = "btn_close";
-            this.btn_close.Size = new System.Drawing.Size(31, 28);
-            this.btn_close.TabIndex = 7;
-            this.btn_close.UseVisualStyleBackColor = true;
-            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
-            this.btn_close.MouseLeave += new System.EventHandler(this.btn_close_MouseLeave);
-            this.btn_close.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_close_MouseMove);
-            // 
             // lbl_name
             // 
             this.lbl_name.AutoSize = true;
@@ -260,9 +216,9 @@
             // 
             this.txt_confimar.BackColor = System.Drawing.Color.White;
             this.txt_confimar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_confimar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_confimar.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_confimar.ForeColor = System.Drawing.Color.Black;
-            this.txt_confimar.Location = new System.Drawing.Point(93, 395);
+            this.txt_confimar.Location = new System.Drawing.Point(90, 389);
             this.txt_confimar.Multiline = true;
             this.txt_confimar.Name = "txt_confimar";
             this.txt_confimar.PasswordChar = '*';
@@ -326,9 +282,9 @@
             // 
             this.txt_passe.BackColor = System.Drawing.Color.White;
             this.txt_passe.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txt_passe.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_passe.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_passe.ForeColor = System.Drawing.Color.Black;
-            this.txt_passe.Location = new System.Drawing.Point(95, 488);
+            this.txt_passe.Location = new System.Drawing.Point(95, 483);
             this.txt_passe.Multiline = true;
             this.txt_passe.Name = "txt_passe";
             this.txt_passe.PasswordChar = '*';
@@ -346,6 +302,16 @@
             this.pnl_passe.Size = new System.Drawing.Size(236, 1);
             this.pnl_passe.TabIndex = 87;
             this.pnl_passe.Visible = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.padlock__1_;
+            this.pictureBox4.Location = new System.Drawing.Point(52, 384);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(37, 36);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 77;
+            this.pictureBox4.TabStop = false;
             // 
             // pic_passe
             // 
@@ -381,16 +347,6 @@
             this.pictureBox3.TabIndex = 80;
             this.pictureBox3.TabStop = false;
             this.pictureBox3.Visible = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.padlock__1_;
-            this.pictureBox4.Location = new System.Drawing.Point(52, 384);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(37, 36);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 77;
-            this.pictureBox4.TabStop = false;
             // 
             // pic_mostrar
             // 
@@ -435,6 +391,50 @@
             this.pic_username.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pic_username.TabIndex = 63;
             this.pic_username.TabStop = false;
+            // 
+            // pic_logo
+            // 
+            this.pic_logo.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources._584292c4a6515b1e0ad75aca;
+            this.pic_logo.Location = new System.Drawing.Point(11, 3);
+            this.pic_logo.Name = "pic_logo";
+            this.pic_logo.Size = new System.Drawing.Size(22, 22);
+            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pic_logo.TabIndex = 31;
+            this.pic_logo.TabStop = false;
+            this.pic_logo.MouseLeave += new System.EventHandler(this.pic_logo_MouseLeave);
+            this.pic_logo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pic_logo_MouseMove);
+            // 
+            // btn_minimize
+            // 
+            this.btn_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_minimize.FlatAppearance.BorderSize = 0;
+            this.btn_minimize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.btn_minimize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_minimize.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.minus_sign;
+            this.btn_minimize.Location = new System.Drawing.Point(278, 0);
+            this.btn_minimize.Name = "btn_minimize";
+            this.btn_minimize.Size = new System.Drawing.Size(28, 28);
+            this.btn_minimize.TabIndex = 8;
+            this.btn_minimize.UseVisualStyleBackColor = true;
+            this.btn_minimize.Click += new System.EventHandler(this.btn_minimize_Click);
+            this.btn_minimize.MouseLeave += new System.EventHandler(this.btn_minimize_MouseLeave);
+            this.btn_minimize.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_minimize_MouseMove);
+            // 
+            // btn_close
+            // 
+            this.btn_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btn_close.FlatAppearance.BorderSize = 0;
+            this.btn_close.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Red;
+            this.btn_close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_close.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.close__4_;
+            this.btn_close.Location = new System.Drawing.Point(306, 0);
+            this.btn_close.Name = "btn_close";
+            this.btn_close.Size = new System.Drawing.Size(31, 28);
+            this.btn_close.TabIndex = 7;
+            this.btn_close.UseVisualStyleBackColor = true;
+            this.btn_close.Click += new System.EventHandler(this.btn_close_Click);
+            this.btn_close.MouseLeave += new System.EventHandler(this.btn_close_MouseLeave);
+            this.btn_close.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_close_MouseMove);
             // 
             // pictureBox1
             // 
@@ -487,15 +487,15 @@
             this.Text = "Jordan - Sign In";
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_passe)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_mostrar)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_ocultado)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_password)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_username)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
