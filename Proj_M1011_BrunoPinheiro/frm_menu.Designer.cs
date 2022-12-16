@@ -76,9 +76,9 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.minus_sign;
-            this.pictureBox2.Location = new System.Drawing.Point(457, 12);
+            this.pictureBox2.Location = new System.Drawing.Point(480, 18);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox2.Size = new System.Drawing.Size(20, 20);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox2.TabIndex = 6;
             this.pictureBox2.TabStop = false;
@@ -86,9 +86,9 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.close;
-            this.pictureBox1.Location = new System.Drawing.Point(504, 12);
+            this.pictureBox1.Location = new System.Drawing.Point(516, 18);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(32, 32);
+            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
