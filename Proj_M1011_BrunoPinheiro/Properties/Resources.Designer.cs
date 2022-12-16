@@ -366,6 +366,16 @@ namespace Proj_M1011_BrunoPinheiro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap rsz_584292c4a6515b1e0ad75aca {
+            get {
+                object obj = ResourceManager.GetObject("rsz_584292c4a6515b1e0ad75aca", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap rsz_ezgifcom_gif_maker_40_clipdrop_background_removal_clipdrop_enhance {
             get {
                 object obj = ResourceManager.GetObject("rsz_ezgifcom-gif-maker_40_clipdrop-background-removal_clipdrop-enhance", resourceCulture);

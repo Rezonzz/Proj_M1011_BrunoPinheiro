@@ -127,6 +127,9 @@
   <data name="close (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="close (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\close (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="jordan2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jordan2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -135,9 +138,6 @@
   </data>
   <data name="close (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="jordan5" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jordan5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="jordan61" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jordan61.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +163,8 @@
   <data name="info" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\info.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="close (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\close (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="jordan5" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jordan5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minus-sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minus-sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -186,6 +186,9 @@
   </data>
   <data name="jordan1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jordan1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="89bb09f2-001c-4dd1-a9cd-010eab46d781" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\89bb09f2-001c-4dd1-a9cd-010eab46d781.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rsz_1nike-air-jordan-3-grateful-by-khaled-580775-601-1-550x550_clipdrop-background-removal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rsz_1nike-air-jordan-3-grateful-by-khaled-580775-601-1-550x550_clipdrop-background-removal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -211,7 +214,7 @@
   <data name="close (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="89bb09f2-001c-4dd1-a9cd-010eab46d781" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\89bb09f2-001c-4dd1-a9cd-010eab46d781.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rsz_584292c4a6515b1e0ad75aca" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rsz_584292c4a6515b1e0ad75aca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

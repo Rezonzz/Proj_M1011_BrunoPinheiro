@@ -16,5 +16,10 @@ namespace Proj_M1011_BrunoPinheiro
         {
             InitializeComponent();
         }
+
+        private void pic_close_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

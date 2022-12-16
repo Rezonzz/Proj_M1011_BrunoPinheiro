@@ -29,32 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_autor));
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pic_close = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.btn_creditos = new System.Windows.Forms.Button();
+            this.pic_close = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources._89bb09f2_001c_4dd1_a9cd_010eab46d781;
-            this.pictureBox1.Location = new System.Drawing.Point(400, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(194, 338);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // pic_close
-            // 
-            this.pic_close.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.close;
-            this.pic_close.Location = new System.Drawing.Point(12, 12);
-            this.pic_close.Name = "pic_close";
-            this.pic_close.Size = new System.Drawing.Size(24, 24);
-            this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_close.TabIndex = 5;
-            this.pic_close.TabStop = false;
             // 
             // label1
             // 
@@ -66,12 +48,62 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "AUTOR";
             // 
+            // btn_creditos
+            // 
+            this.btn_creditos.FlatAppearance.BorderSize = 0;
+            this.btn_creditos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_creditos.Font = new System.Drawing.Font("Futura-Heavy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_creditos.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.rsz_584292c4a6515b1e0ad75aca;
+            this.btn_creditos.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_creditos.Location = new System.Drawing.Point(133, 213);
+            this.btn_creditos.Name = "btn_creditos";
+            this.btn_creditos.Size = new System.Drawing.Size(114, 100);
+            this.btn_creditos.TabIndex = 7;
+            this.btn_creditos.Text = "Créditos";
+            this.btn_creditos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_creditos.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.btn_creditos.UseVisualStyleBackColor = true;
+            // 
+            // pic_close
+            // 
+            this.pic_close.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.close;
+            this.pic_close.Location = new System.Drawing.Point(12, 12);
+            this.pic_close.Name = "pic_close";
+            this.pic_close.Size = new System.Drawing.Size(24, 24);
+            this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_close.TabIndex = 5;
+            this.pic_close.TabStop = false;
+            this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources._89bb09f2_001c_4dd1_a9cd_010eab46d781;
+            this.pictureBox1.Location = new System.Drawing.Point(400, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(194, 338);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Akira Expanded", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.label2.Location = new System.Drawing.Point(3, 82);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(396, 34);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "Bruno Pinheiro";
+            // 
             // frm_autor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(593, 335);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btn_creditos);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pic_close);
             this.Controls.Add(this.pictureBox1);
@@ -80,8 +112,8 @@
             this.Name = "frm_autor";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jordan - Autor";
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -92,5 +124,7 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pic_close;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_creditos;
+        private System.Windows.Forms.Label label2;
     }
 }
