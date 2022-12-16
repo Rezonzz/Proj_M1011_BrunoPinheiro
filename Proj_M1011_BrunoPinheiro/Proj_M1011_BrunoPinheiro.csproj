@@ -170,5 +170,8 @@
   <ItemGroup>
     <None Include="Resources\rsz_1nike-air-jordan-3-grateful-by-khaled-580775-601-1-550x550_clipdrop-background-removal.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\584292c4a6515b1e0ad75aca1.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
