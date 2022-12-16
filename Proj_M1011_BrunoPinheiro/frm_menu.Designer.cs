@@ -126,6 +126,7 @@
             this.btn_autor.Text = "Autor";
             this.btn_autor.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_autor.UseVisualStyleBackColor = true;
+            this.btn_autor.Click += new System.EventHandler(this.btn_autor_Click);
             this.btn_autor.MouseLeave += new System.EventHandler(this.btn_autor_MouseLeave);
             this.btn_autor.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_autor_MouseMove);
             // 

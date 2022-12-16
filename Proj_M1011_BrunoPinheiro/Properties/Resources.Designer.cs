@@ -83,6 +83,16 @@ namespace Proj_M1011_BrunoPinheiro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _89bb09f2_001c_4dd1_a9cd_010eab46d781 {
+            get {
+                object obj = ResourceManager.GetObject("89bb09f2-001c-4dd1-a9cd-010eab46d781", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _9c8286a9ddb18ecc7709a490b5084c2a_removebg_preview__2_ {
             get {
                 object obj = ResourceManager.GetObject("9c8286a9ddb18ecc7709a490b5084c2a-removebg-preview (2)", resourceCulture);

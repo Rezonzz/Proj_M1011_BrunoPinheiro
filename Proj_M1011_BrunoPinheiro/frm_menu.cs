@@ -78,5 +78,11 @@ namespace Proj_M1011_BrunoPinheiro
         {
             WindowState = FormWindowState.Minimized;
         }
+
+        private void btn_autor_Click(object sender, EventArgs e)
+        {
+            frm_autor frm_autor = new frm_autor();
+            frm_autor.Show();
+        }
     }
 }
