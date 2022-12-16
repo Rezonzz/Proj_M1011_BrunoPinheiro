@@ -138,7 +138,8 @@ namespace Proj_M1011_BrunoPinheiro
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-
+            frm_menu frm_menu = new frm_menu();
+            frm_menu.Show();
         }
     }
 }
