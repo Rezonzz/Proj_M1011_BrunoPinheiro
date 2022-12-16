@@ -143,6 +143,16 @@ namespace Proj_M1011_BrunoPinheiro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Dior_x_A_cklb8j516005601v5rppypmh4 {
+            get {
+                object obj = ResourceManager.GetObject("Dior x A-cklb8j516005601v5rppypmh4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap hide__1_ {
             get {
                 object obj = ResourceManager.GetObject("hide (1)", resourceCulture);
@@ -173,6 +183,16 @@ namespace Proj_M1011_BrunoPinheiro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap jordan1 {
+            get {
+                object obj = ResourceManager.GetObject("jordan1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap minus {
             get {
                 object obj = ResourceManager.GetObject("minus", resourceCulture);
@@ -193,9 +213,52 @@ namespace Proj_M1011_BrunoPinheiro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Nike_AIR_JORDAN_3_GRATEFUL_BY_KHALED_580775_601_1_550x550_clipdrop_background_removal_clipdrop_enhance {
+            get {
+                object obj = ResourceManager.GetObject("Nike-AIR-JORDAN-3-GRATEFUL-BY-KHALED-580775-601-1-550x550_clipdrop-background-rem" +
+                        "oval_clipdrop-enhance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap padlock__1_ {
             get {
                 object obj = ResourceManager.GetObject("padlock (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rsz_1nike_air_jordan_3_grateful_by_khaled_580775_601_1_550x550_clipdrop_background_removal {
+            get {
+                object obj = ResourceManager.GetObject("rsz_1nike-air-jordan-3-grateful-by-khaled-580775-601-1-550x550_clipdrop-backgroun" +
+                        "d-removal", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rsz_3ezgifcom_gif_maker_41_clipdrop_enhance_clipdrop_background_removal_clipdrop_enhance {
+            get {
+                object obj = ResourceManager.GetObject("rsz_3ezgifcom-gif-maker_41_clipdrop-enhance_clipdrop-background-removal_clipdrop-" +
+                        "enhance", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rsz_ezgifcom_gif_maker_40_clipdrop_background_removal_clipdrop_enhance {
+            get {
+                object obj = ResourceManager.GetObject("rsz_ezgifcom-gif-maker_40_clipdrop-background-removal_clipdrop-enhance", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

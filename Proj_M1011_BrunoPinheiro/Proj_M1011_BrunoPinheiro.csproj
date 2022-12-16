@@ -152,5 +152,23 @@
   <ItemGroup>
     <None Include="Resources\id-card.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_3ezgifcom-gif-maker_41_clipdrop-enhance_clipdrop-background-removal_clipdrop-enhance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_ezgifcom-gif-maker_40_clipdrop-background-removal_clipdrop-enhance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Nike-AIR-JORDAN-3-GRATEFUL-BY-KHALED-580775-601-1-550x550_clipdrop-background-removal_clipdrop-enhance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Dior x A-cklb8j516005601v5rppypmh4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\jordan1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsz_1nike-air-jordan-3-grateful-by-khaled-580775-601-1-550x550_clipdrop-background-removal.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
