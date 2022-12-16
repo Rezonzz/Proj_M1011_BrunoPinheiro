@@ -52,6 +52,12 @@
     <Compile Include="frm_autor.Designer.cs">
       <DependentUpon>frm_autor.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_creditos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_creditos.Designer.cs">
+      <DependentUpon>frm_creditos.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +86,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frm_autor.resx">
       <DependentUpon>frm_autor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_creditos.resx">
+      <DependentUpon>frm_creditos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_login.resx">
       <DependentUpon>frm_login.cs</DependentUpon>
