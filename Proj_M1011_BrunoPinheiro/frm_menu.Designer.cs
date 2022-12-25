@@ -185,6 +185,7 @@
             this.Name = "frm_menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jordan - Menu";
+            this.Load += new System.EventHandler(this.frm_menu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();

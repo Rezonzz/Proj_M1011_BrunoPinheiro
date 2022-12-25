@@ -32,21 +32,31 @@ namespace Proj_M1011_BrunoPinheiro
             lbl_dep.Location = new Point(lbl_dep.Location.X, lbl_dep.Location.Y - 2);
             lbl_nome6.Location = new Point(lbl_nome6.Location.X, lbl_nome6.Location.Y - 2);
 
-            if (lbl_nome6.Location.Y <= 4)
+            if (lbl_nome6.Location.Y <= 100)
             {
-                lbl_dp.Location = new Point(61, 557);
-                lbl_nome1.Location = new Point(107, 589);
+                lbl_dp.Location = new Point(54, 557);
+                lbl_nome1.Location = new Point(92, 589);
                 lbl_ap.Location = new Point(38, 632);
-                lbl_nome2.Location = new Point(107, 661);
-                lbl_ts.Location = new Point(82, 703);
-                lbl_nome3.Location = new Point(106, 733);
-                lbl_d.Location = new Point(118, 778);
-                lbl_nome4.Location = new Point(106, 808);
-                lbl_p.Location = new Point(111, 846);
-                lbl_nome5.Location = new Point(105, 882);
-                lbl_dep.Location = new Point(82, 921);
-                lbl_nome6.Location = new Point(105, 955);
+                lbl_nome2.Location = new Point(92, 661);
+                lbl_ts.Location = new Point(76, 703);
+                lbl_nome3.Location = new Point(92, 733);
+                lbl_d.Location = new Point(121, 778);
+                lbl_nome4.Location = new Point(92, 808);
+                lbl_p.Location = new Point(112, 846);
+                lbl_nome5.Location = new Point(92, 882);
+                lbl_dep.Location = new Point(78, 921);
+                lbl_nome6.Location = new Point(92, 955);
             }
+        }
+
+        private void pic_close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pic_minimize_Click(object sender, EventArgs e)
+        {
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

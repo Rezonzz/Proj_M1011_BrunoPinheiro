@@ -84,5 +84,10 @@ namespace Proj_M1011_BrunoPinheiro
             frm_autor frm_autor = new frm_autor();
             frm_autor.Show();
         }
+
+        private void frm_menu_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

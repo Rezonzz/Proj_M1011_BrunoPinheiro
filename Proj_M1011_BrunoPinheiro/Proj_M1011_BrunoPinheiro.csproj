@@ -224,5 +224,8 @@
   <ItemGroup>
     <None Include="Resources\rsz_584292c4a6515b1e0ad75aca.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\github-mark.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

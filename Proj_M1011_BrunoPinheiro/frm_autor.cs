@@ -21,5 +21,11 @@ namespace Proj_M1011_BrunoPinheiro
         {
             this.Close();
         }
+
+        private void btn_creditos_Click(object sender, EventArgs e)
+        {
+            frm_creditos frm_creditos = new frm_creditos();
+            frm_creditos.Show();
+        }
     }
 }
