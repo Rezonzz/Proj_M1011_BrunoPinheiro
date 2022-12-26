@@ -8,6 +8,9 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Linq;
+using System.IO;
 
 namespace Proj_M1011_BrunoPinheiro
 {
@@ -27,6 +30,9 @@ namespace Proj_M1011_BrunoPinheiro
         {
             InitializeComponent();
         }
+
+        public string FromXML_user;
+        public string FromXML_password;
 
         private void pnl_top_MouseMove(object sender, MouseEventArgs e)
         {
@@ -85,6 +91,8 @@ namespace Proj_M1011_BrunoPinheiro
 
         private void btn_minimize_Click(object sender, EventArgs e)
         {
+            this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
+            this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
             WindowState = FormWindowState.Minimized;
         }
 
@@ -131,15 +139,176 @@ namespace Proj_M1011_BrunoPinheiro
 
         private void lbl_registrar_Click(object sender, EventArgs e)
         {
-            frm_signin frm_signin = new frm_signin();
+            frm_signup frm_signin = new frm_signup();
             frm_signin.Show();
             this.Hide();
         }
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            frm_menu frm_menu = new frm_menu();
-            frm_menu.Show();
+            this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
+            this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+            XDocument doc = XDocument.Load(Application.StartupPath.ToString() + @"\users.xml");
+            var selected_user = from x in doc.Descendants("users").Where 
+                                (x => (string)x.Element("username") == txt_username.Text)
+                                select new
+                                {
+                                    XMLuser = x.Element("username").Value,
+                                    XMLpassword = x.Element("password").Value
+                                };
+            foreach (var x in selected_user)
+            {
+                FromXML_user = x.XMLuser;
+                FromXML_password = x.XMLpassword;
+            }
+            if (txt_username.Text != "" || txt_username.Text != "Username")
+            {
+                if (txt_password.Text != "" || txt_password.Text != "Password")
+                {
+                    if (txt_username.Text == FromXML_user)
+                    {
+                        if (txt_password.Text == FromXML_password)
+                        {
+                            UserInfo.Username_user = FromXML_user;
+                            UserInfo.Password_user = FromXML_password;
+                            frm_menu frm_menu = new frm_menu();
+                            frm_menu.Show();
+                            this.Hide();
+                        }
+                        else
+                        {
+                            MessageBox.Show("pass errada");
+                        }
+                    }
+                    else
+                    {
+                        MessageBox.Show("user errado");
+                    }
+                }
+                else
+                {
+                    MessageBox.Show("user vazio");
+                }
+            }
+            else
+            {
+                MessageBox.Show("password vazia");
+            }
+        }
+
+        private void pic_mostrar_Click(object sender, EventArgs e)
+        {
+            if (txt_password.Text != "Password")
+            {
+                txt_password.UseSystemPasswordChar = true;
+            }
+            pic_ocultado.Enabled = true;
+            pic_ocultado.Visible = true;
+            pic_mostrar.Enabled = false;
+            pic_mostrar.Visible = false;
+        }
+
+        private void lbl_limpar_Click(object sender, EventArgs e)
+        {
+            this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__2_));
+            this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+            txt_username.Clear();
+            txt_password.Clear();
+            txt_username.ResetText();
+            txt_password.ResetText();
+            txt_username.Focus();
+            txt_password.Text = "Password";
+            txt_password.UseSystemPasswordChar = true;
+            pic_ocultado.Enabled = false;
+            pic_ocultado.Visible = false;
+            pic_mostrar.Enabled = true;
+            pic_mostrar.Visible = true;
+            lbl_limpar.Visible = false;
+            lbl_limpar.Enabled = false;
+        }
+
+        private void pic_ocultado_Click(object sender, EventArgs e)
+        {
+            if (txt_password.Text != "Password")
+            {
+                txt_password.UseSystemPasswordChar = false;
+            }
+            pic_ocultado.Enabled = false;
+            pic_ocultado.Visible = false;
+            pic_mostrar.Enabled = true;
+            pic_mostrar.Visible = true;
+        }
+
+        private void txt_username_Click(object sender, EventArgs e)
+        {
+            this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__2_));
+            this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+            if (txt_username.Text == "Username")
+            {
+                txt_username.ResetText();
+                txt_username.Focus();
+            }
+        }
+
+        private void txt_password_Click(object sender, EventArgs e)
+        {
+            this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__2_));
+            this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
+            if (txt_password.Text == "Password")
+            {
+                txt_password.UseSystemPasswordChar = false;
+                txt_password.ResetText();
+                txt_password.Focus();
+            }
+        }
+
+        private void frm_login_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void txt_username_TextChanged(object sender, EventArgs e)
+        {
+            txt_username.MaxLength = 10;
+            if (txt_username.Text != "" && txt_username.Text != "Username")
+            {
+                lbl_limpar.Visible = true;
+                lbl_limpar.Enabled = true;
+            }
+        }
+
+        private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+            txt_password.MaxLength = 12;
+            if (txt_password.Text != "" && txt_password.Text != "Password")
+            {
+                lbl_limpar.Visible = true;
+                lbl_limpar.Enabled = true;
+            }
+        }
+
+        private void txt_username_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txt_password.Text == "Password")
+                {
+                    txt_password.UseSystemPasswordChar = false;
+                    txt_password.ResetText();
+                    txt_password.Focus();
+
+                }
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txt_password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_login.PerformClick();
+                e.SuppressKeyPress = true;
+            }
         }
     }
 }

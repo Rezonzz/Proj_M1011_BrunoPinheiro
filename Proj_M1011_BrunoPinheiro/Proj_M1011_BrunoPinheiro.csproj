@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="UserInfo.cs" />
     <Compile Include="frm_autor.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,11 +77,11 @@
     <Compile Include="frm_sair.Designer.cs">
       <DependentUpon>frm_sair.cs</DependentUpon>
     </Compile>
-    <Compile Include="frm_signin.cs">
+    <Compile Include="frm_signup.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frm_signin.Designer.cs">
-      <DependentUpon>frm_signin.cs</DependentUpon>
+    <Compile Include="frm_signup.Designer.cs">
+      <DependentUpon>frm_signup.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -99,8 +100,8 @@
     <EmbeddedResource Include="frm_sair.resx">
       <DependentUpon>frm_sair.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frm_signin.resx">
-      <DependentUpon>frm_signin.cs</DependentUpon>
+    <EmbeddedResource Include="frm_signup.resx">
+      <DependentUpon>frm_signup.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -226,6 +227,14 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\github-mark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ezgif.com-gif-maker %2842%29_clipdrop-background-removal.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\padlock %282%29.png" />
+    <None Include="Resources\account %282%29.png" />
+    <Content Include="users.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

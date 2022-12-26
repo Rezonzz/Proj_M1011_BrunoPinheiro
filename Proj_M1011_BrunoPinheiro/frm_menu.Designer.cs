@@ -38,6 +38,7 @@
             this.btn_autor = new System.Windows.Forms.Button();
             this.btn_consultar = new System.Windows.Forms.Button();
             this.btn_artigos = new System.Windows.Forms.Button();
+            this.lbl_username = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
@@ -109,6 +110,7 @@
             this.btn_sair.Text = "Sair";
             this.btn_sair.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_sair.UseVisualStyleBackColor = true;
+            this.btn_sair.Click += new System.EventHandler(this.btn_sair_Click);
             this.btn_sair.MouseLeave += new System.EventHandler(this.btn_sair_MouseLeave);
             this.btn_sair.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_sair_MouseMove);
             // 
@@ -164,12 +166,23 @@
             this.btn_artigos.MouseLeave += new System.EventHandler(this.btn_artigos_MouseLeave);
             this.btn_artigos.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_artigos_MouseMove);
             // 
+            // lbl_username
+            // 
+            this.lbl_username.Font = new System.Drawing.Font("Akira Expanded", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_username.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_username.Location = new System.Drawing.Point(12, 106);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(524, 19);
+            this.lbl_username.TabIndex = 9;
+            this.lbl_username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // frm_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(548, 331);
+            this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.pic_minimize);
@@ -205,5 +218,6 @@
         private System.Windows.Forms.PictureBox pic_minimize;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label lbl_username;
     }
 }

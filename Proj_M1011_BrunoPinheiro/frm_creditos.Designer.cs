@@ -46,15 +46,15 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.pic_close = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pic_minimize = new System.Windows.Forms.PictureBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
-            this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tmr_creditos
@@ -239,15 +239,6 @@
             this.panel1.Size = new System.Drawing.Size(337, 38);
             this.panel1.TabIndex = 100;
             // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.label1);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 38);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(337, 49);
-            this.panel2.TabIndex = 101;
-            // 
             // pic_close
             // 
             this.pic_close.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.close;
@@ -272,13 +263,22 @@
             // pic_minimize
             // 
             this.pic_minimize.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.minus_sign;
-            this.pic_minimize.Location = new System.Drawing.Point(282, 10);
+            this.pic_minimize.Location = new System.Drawing.Point(275, 10);
             this.pic_minimize.Name = "pic_minimize";
             this.pic_minimize.Size = new System.Drawing.Size(18, 18);
             this.pic_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_minimize.TabIndex = 96;
             this.pic_minimize.TabStop = false;
             this.pic_minimize.Click += new System.EventHandler(this.pic_minimize_Click);
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.label1);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 38);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(337, 49);
+            this.panel2.TabIndex = 101;
             // 
             // frm_creditos
             // 
@@ -308,11 +308,11 @@
             this.Text = "Jordan - Créditos";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.panel2.ResumeLayout(false);
-            this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).EndInit();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

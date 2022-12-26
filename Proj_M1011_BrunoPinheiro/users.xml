@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<profile>
+	<users>
+		<username>Rezonzz</username>
+		<password>joao123</password>
+		<passeAdm>y</passeAdm>
+	</users>
+	<users>
+		<username>João77</username>
+		<password>joao123</password>
+		<passeAdm>n</passeAdm>
+	</users>
+</profile>

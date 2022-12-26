@@ -8,10 +8,12 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml;
+using System.Xml.Linq;
 
 namespace Proj_M1011_BrunoPinheiro
 {
-    public partial class frm_signin : Form
+    public partial class frm_signup : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -23,7 +25,7 @@ namespace Proj_M1011_BrunoPinheiro
            int nWidthEllipse,
            int nHeightEllipse
        );
-        public frm_signin()
+        public frm_signup()
         {
             InitializeComponent();
         }
@@ -146,6 +148,98 @@ namespace Proj_M1011_BrunoPinheiro
         private void pic_logo_MouseLeave(object sender, EventArgs e)
         {
             pnl_top.BackColor = Color.FromArgb(255, 255, 255);
+        }
+
+        private void btn_login_Click(object sender, EventArgs e)
+        {
+            if (txt_username.Text == "")
+            {
+                MessageBox.Show("Username vazio");
+            }
+            else
+            {
+                if (txt_password.Text == "")
+                {
+                    MessageBox.Show("Password vazia");
+                }
+                else
+                {
+                    if (txt_confirmar.Text == "")
+                    {
+                        MessageBox.Show("Confirmar Password vazio");
+                    }
+                    else
+                    {
+                        if (txt_confirmar.Text != txt_password.Text)
+                        {
+                            MessageBox.Show("Password nao iguais");
+                        }
+                        else
+                        {
+                            if (rad_sim.Checked == true && txt_passe.Text != "a8ut54hwf2son")
+                            {
+                                MessageBox.Show("Passe Errado ou Vazio");
+                            }
+                            else
+                            {
+                                XmlDocument xmlDoc = new XmlDocument();
+                                xmlDoc.Load("users.xml");
+                                XmlElement novoelemento = xmlDoc.CreateElement("users");
+                                XmlElement xmlUsername = xmlDoc.CreateElement("username");
+                                XmlElement xmlPassword = xmlDoc.CreateElement("password");
+                                XmlElement xmlPasse = xmlDoc.CreateElement("passeAdm");
+                                xmlUsername.InnerText = txt_username.Text;
+                                xmlPassword.InnerText = txt_password.Text;
+                                if (rad_sim.Checked == true)
+                                {
+                                    xmlPasse.InnerText = "y";
+                                }
+                                else
+                                {
+                                    xmlPasse.InnerText = "n";
+                                }
+                                novoelemento.AppendChild(xmlUsername);
+                                novoelemento.AppendChild(xmlPassword);
+                                novoelemento.AppendChild(xmlPasse);
+                                xmlDoc.DocumentElement.AppendChild(novoelemento);
+                                xmlDoc.Save("users.xml");
+                                CarregaDadosXML();
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        public void CarregaDadosXML()
+        {
+            DataSet ds = new DataSet();
+            ds.ReadXml("users.xml");
+        }
+
+        private void lbl_limpar_Click(object sender, EventArgs e)
+        {
+            txt_username.Clear();
+            txt_password.Clear();
+            txt_confirmar.Clear();
+            txt_username.ResetText();
+            txt_password.ResetText();
+            txt_confirmar.ResetText();
+            txt_username.Focus();
+            txt_password.Text = "Password";
+            txt_password.UseSystemPasswordChar = true;
+            txt_confirmar.Text = "Confirmar Password";
+            txt_confirmar.UseSystemPasswordChar = true;
+            pic_ocultado.Enabled = false;
+            pic_ocultado.Visible = false;
+            pic_mostrar.Enabled = true;
+            pic_mostrar.Visible = true;
+            pic_ocultado2.Enabled = false;
+            pic_ocultado2.Visible = false;
+            pic_mostrar2.Enabled = true;
+            pic_mostrar2.Visible = true;
+            lbl_limpar.Visible = false;
+            lbl_limpar.Enabled = false;
         }
     }
 }

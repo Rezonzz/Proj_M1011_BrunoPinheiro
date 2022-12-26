@@ -119,5 +119,10 @@ namespace Proj_M1011_BrunoPinheiro
         {
 
         }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

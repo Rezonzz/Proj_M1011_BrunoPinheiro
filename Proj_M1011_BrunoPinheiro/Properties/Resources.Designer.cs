@@ -113,6 +113,16 @@ namespace Proj_M1011_BrunoPinheiro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap account__2_ {
+            get {
+                object obj = ResourceManager.GetObject("account (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap close {
             get {
                 object obj = ResourceManager.GetObject("close", resourceCulture);
@@ -166,6 +176,16 @@ namespace Proj_M1011_BrunoPinheiro.Properties {
         internal static System.Drawing.Bitmap Dior_x_A_cklb8j516005601v5rppypmh4 {
             get {
                 object obj = ResourceManager.GetObject("Dior x A-cklb8j516005601v5rppypmh4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap ezgif_com_gif_maker__42__clipdrop_background_removal {
+            get {
+                object obj = ResourceManager.GetObject("ezgif.com-gif-maker (42)_clipdrop-background-removal", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -347,6 +367,16 @@ namespace Proj_M1011_BrunoPinheiro.Properties {
         internal static System.Drawing.Bitmap padlock__1_ {
             get {
                 object obj = ResourceManager.GetObject("padlock (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap padlock__2_ {
+            get {
+                object obj = ResourceManager.GetObject("padlock (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

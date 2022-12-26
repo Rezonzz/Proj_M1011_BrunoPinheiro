@@ -51,7 +51,7 @@ namespace Proj_M1011_BrunoPinheiro
 
         private void pic_close_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
 
         private void pic_minimize_Click(object sender, EventArgs e)

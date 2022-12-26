@@ -34,29 +34,32 @@
             this.btn_no = new System.Windows.Forms.Button();
             this.pnl_top = new System.Windows.Forms.Panel();
             this.lbl_name = new System.Windows.Forms.Label();
-            this.btn_close = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btn_close = new System.Windows.Forms.Button();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.label2.Location = new System.Drawing.Point(61, 69);
+            this.label2.Location = new System.Drawing.Point(102, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(210, 50);
+            this.label2.Size = new System.Drawing.Size(154, 50);
             this.label2.TabIndex = 19;
             this.label2.Text = "Deseja sair da aplicação?";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // btn_yes
             // 
             this.btn_yes.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_yes.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_yes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_yes.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_yes.Font = new System.Drawing.Font("Futura-Heavy", 9.749998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_yes.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_yes.Location = new System.Drawing.Point(83, 139);
             this.btn_yes.Name = "btn_yes";
@@ -73,7 +76,7 @@
             this.btn_no.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_no.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btn_no.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_no.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_no.Font = new System.Drawing.Font("Futura-Heavy", 9.749998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_no.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btn_no.Location = new System.Drawing.Point(175, 139);
             this.btn_no.Name = "btn_no";
@@ -88,6 +91,7 @@
             // pnl_top
             // 
             this.pnl_top.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pnl_top.Controls.Add(this.pictureBox3);
             this.pnl_top.Controls.Add(this.lbl_name);
             this.pnl_top.Controls.Add(this.btn_close);
             this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
@@ -103,16 +107,26 @@
             // lbl_name
             // 
             this.lbl_name.AutoSize = true;
-            this.lbl_name.Font = new System.Drawing.Font("Comic Sans MS", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_name.Font = new System.Drawing.Font("Akira Expanded", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_name.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_name.Location = new System.Drawing.Point(10, 3);
+            this.lbl_name.Location = new System.Drawing.Point(42, 6);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(137, 21);
+            this.lbl_name.Size = new System.Drawing.Size(59, 17);
             this.lbl_name.TabIndex = 8;
-            this.lbl_name.Text = "Sair da Aplicação";
+            this.lbl_name.Text = "Sair";
             this.lbl_name.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbl_name_MouseDown);
             this.lbl_name.MouseLeave += new System.EventHandler(this.lbl_name_MouseLeave);
             this.lbl_name.MouseMove += new System.Windows.Forms.MouseEventHandler(this.lbl_name_MouseMove);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.ezgif_com_gif_maker__42__clipdrop_background_removal;
+            this.pictureBox1.Location = new System.Drawing.Point(2, 29);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(101, 104);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
             // 
             // btn_close
             // 
@@ -130,15 +144,15 @@
             this.btn_close.MouseLeave += new System.EventHandler(this.btn_close_MouseLeave);
             this.btn_close.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_close_MouseMove);
             // 
-            // pictureBox1
+            // pictureBox3
             // 
-            this.pictureBox1.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.info;
-            this.pictureBox1.Location = new System.Drawing.Point(6, 66);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(63, 58);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 20;
-            this.pictureBox1.TabStop = false;
+            this.pictureBox3.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources._584292c4a6515b1e0ad75aca1;
+            this.pictureBox3.Location = new System.Drawing.Point(9, 0);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(28, 28);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox3.TabIndex = 23;
+            this.pictureBox3.TabStop = false;
             // 
             // frm_sair
             // 
@@ -146,11 +160,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(267, 175);
-            this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_yes);
             this.Controls.Add(this.btn_no);
             this.Controls.Add(this.pnl_top);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pictureBox1);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -162,6 +176,7 @@
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -175,5 +190,6 @@
         private System.Windows.Forms.Panel pnl_top;
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.Button btn_close;
+        private System.Windows.Forms.PictureBox pictureBox3;
     }
 }

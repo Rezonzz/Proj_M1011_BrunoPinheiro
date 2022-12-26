@@ -87,7 +87,13 @@ namespace Proj_M1011_BrunoPinheiro
 
         private void frm_menu_Load(object sender, EventArgs e)
         {
+            lbl_username.Text = UserInfo.Username_user;
+        }
 
+        private void btn_sair_Click(object sender, EventArgs e)
+        {
+            frm_sair frm_sair = new frm_sair();
+            frm_sair.Show();
         }
     }
 }
