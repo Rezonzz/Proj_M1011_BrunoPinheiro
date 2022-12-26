@@ -234,6 +234,14 @@
   <ItemGroup>
     <None Include="Resources\padlock %282%29.png" />
     <None Include="Resources\account %282%29.png" />
+    <None Include="Resources\id-card %281%29.png" />
+    <Content Include="login.xml" />
+    <None Include="Resources\jordan9.png" />
+    <None Include="Resources\jordaan9.png" />
+    <None Include="Resources\jordann9.png" />
+    <None Include="Resources\jordaan91.png" />
+    <None Include="Resources\joordan9.png" />
+    <None Include="Resources\jordan10.png" />
     <Content Include="users.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

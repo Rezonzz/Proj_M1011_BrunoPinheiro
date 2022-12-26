@@ -10,5 +10,6 @@ namespace Proj_M1011_BrunoPinheiro
     {
         public static string Username_user { get; set; }
         public static string Password_user { get; set; }
+        public static string login { get; set; }
     }
 }

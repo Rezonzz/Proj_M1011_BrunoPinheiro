@@ -95,5 +95,22 @@ namespace Proj_M1011_BrunoPinheiro
             frm_sair frm_sair = new frm_sair();
             frm_sair.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            frm_login frm_login = new frm_login();
+            frm_login.Show();
+            this.Close();
+        }
+
+        private void btn_logout_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.btn_logout.Image = ((System.Drawing.Image)(Properties.Resources.jordan10));
+        }
+
+        private void btn_logout_MouseLeave(object sender, EventArgs e)
+        {
+            this.btn_logout.Image = ((System.Drawing.Image)(Properties.Resources.joordan9));
+        }
     }
 }

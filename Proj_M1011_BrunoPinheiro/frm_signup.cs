@@ -34,7 +34,7 @@ namespace Proj_M1011_BrunoPinheiro
         {
             this.Size = new Size(337, 640);
             this.CenterToScreen();
-            btn_login.Location = new Point(92, 556);
+            btn_signup.Location = new Point(92, 556);
             lbl_limpar.Location = new Point(238, 563);
             lbl_sair.Location = new Point(139, 596);
             lbl_vazio.Location = new Point(49, 529);
@@ -71,7 +71,7 @@ namespace Proj_M1011_BrunoPinheiro
         {
             this.Size = new Size(337, 576);
             this.CenterToScreen();
-            btn_login.Location = new Point(92, 504);
+            btn_signup.Location = new Point(92, 504);
             lbl_limpar.Location = new Point(238, 511);
             lbl_sair.Location = new Point(139, 544);
             lbl_vazio.Location = new Point(49, 467);
@@ -90,14 +90,14 @@ namespace Proj_M1011_BrunoPinheiro
 
         private void btn_login_MouseMove(object sender, MouseEventArgs e)
         {
-            btn_login.BackColor = Color.Black;
-            btn_login.ForeColor = Color.White;
+            btn_signup.BackColor = Color.Black;
+            btn_signup.ForeColor = Color.White;
         }
 
         private void btn_login_MouseLeave(object sender, EventArgs e)
         {
-            btn_login.BackColor = Color.White;
-            btn_login.ForeColor = Color.Black;
+            btn_signup.BackColor = Color.White;
+            btn_signup.ForeColor = Color.Black;
         }
 
         private void pnl_top_MouseMove(object sender, MouseEventArgs e)
@@ -155,55 +155,89 @@ namespace Proj_M1011_BrunoPinheiro
             if (txt_username.Text == "")
             {
                 MessageBox.Show("Username vazio");
+                Limpar();
             }
             else
             {
                 if (txt_password.Text == "")
                 {
                     MessageBox.Show("Password vazia");
+                    Limpar();
                 }
                 else
                 {
                     if (txt_confirmar.Text == "")
                     {
                         MessageBox.Show("Confirmar Password vazio");
+                        Limpar();
                     }
                     else
                     {
                         if (txt_confirmar.Text != txt_password.Text)
                         {
                             MessageBox.Show("Password nao iguais");
+                            Limpar();
                         }
                         else
                         {
                             if (rad_sim.Checked == true && txt_passe.Text != "a8ut54hwf2son")
                             {
                                 MessageBox.Show("Passe Errado ou Vazio");
+                                Limpar();
                             }
                             else
                             {
-                                XmlDocument xmlDoc = new XmlDocument();
-                                xmlDoc.Load("users.xml");
-                                XmlElement novoelemento = xmlDoc.CreateElement("users");
-                                XmlElement xmlUsername = xmlDoc.CreateElement("username");
-                                XmlElement xmlPassword = xmlDoc.CreateElement("password");
-                                XmlElement xmlPasse = xmlDoc.CreateElement("passeAdm");
-                                xmlUsername.InnerText = txt_username.Text;
-                                xmlPassword.InnerText = txt_password.Text;
-                                if (rad_sim.Checked == true)
+                                XmlTextReader ler = new XmlTextReader("users.xml");
+
+                                while (ler.Read())
                                 {
-                                    xmlPasse.InnerText = "y";
+                                    if (ler.NodeType == XmlNodeType.Element)
+                                    {
+                                        if (ler.Name == "username")
+                                        {
+                                            ler.Read();
+                                            if (ler.Value == txt_username.Text)
+                                            {
+                                                MessageBox.Show("Faça Login! (Conta Já Existente)");
+                                                frm_login frm_login = new frm_login();
+                                                frm_login.Show();
+                                                this.Close();
+                                                Limpar();
+                                                ler.Close();
+                                            }
+                                            else if (ler.Value != txt_username.Text)
+                                            {
+                                                XmlDocument xmlDoc = new XmlDocument();
+                                                xmlDoc.Load("users.xml");
+                                                XmlElement novoelemento = xmlDoc.CreateElement("users");
+                                                XmlElement xmlUsername = xmlDoc.CreateElement("username");
+                                                XmlElement xmlPassword = xmlDoc.CreateElement("password");
+                                                XmlElement xmlPasse = xmlDoc.CreateElement("passeAdm");
+                                                xmlUsername.InnerText = txt_username.Text;
+                                                xmlPassword.InnerText = txt_password.Text;
+                                                if (rad_sim.Checked == true)
+                                                {
+                                                    xmlPasse.InnerText = "y";
+                                                }
+                                                else
+                                                {
+                                                    xmlPasse.InnerText = "n";
+                                                }
+                                                novoelemento.AppendChild(xmlUsername);
+                                                novoelemento.AppendChild(xmlPassword);
+                                                novoelemento.AppendChild(xmlPasse);
+                                                xmlDoc.DocumentElement.AppendChild(novoelemento);
+                                                xmlDoc.Save("users.xml");
+                                                CarregaDadosXML();
+                                                frm_login frm_login = new frm_login();
+                                                frm_login.Show();
+                                                this.Close();
+                                                MessageBox.Show("Faça Login!");
+                                            }
+                                        }
+                                    }
                                 }
-                                else
-                                {
-                                    xmlPasse.InnerText = "n";
-                                }
-                                novoelemento.AppendChild(xmlUsername);
-                                novoelemento.AppendChild(xmlPassword);
-                                novoelemento.AppendChild(xmlPasse);
-                                xmlDoc.DocumentElement.AppendChild(novoelemento);
-                                xmlDoc.Save("users.xml");
-                                CarregaDadosXML();
+                                ler.Close();
                             }
                         }
                     }
@@ -219,6 +253,15 @@ namespace Proj_M1011_BrunoPinheiro
 
         private void lbl_limpar_Click(object sender, EventArgs e)
         {
+            Limpar();   
+        }
+
+        public void Limpar()
+        {
+            this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__2_));
+            this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+            this.pic_confirmar.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+            this.pic_passe.Image = ((System.Drawing.Image)(Properties.Resources.id_card));
             txt_username.Clear();
             txt_password.Clear();
             txt_confirmar.Clear();
@@ -240,6 +283,198 @@ namespace Proj_M1011_BrunoPinheiro
             pic_mostrar2.Visible = true;
             lbl_limpar.Visible = false;
             lbl_limpar.Enabled = false;
+        }
+
+        private void pic_mostrar_Click(object sender, EventArgs e)
+        {
+            if (txt_password.Text != "Password")
+            {
+                txt_password.UseSystemPasswordChar = true;
+            }
+            pic_ocultado.Enabled = true;
+            pic_ocultado.Visible = true;
+            pic_mostrar.Enabled = false;
+            pic_mostrar.Visible = false;
+        }
+
+        private void pic_mostrar2_Click(object sender, EventArgs e)
+        {
+            if (txt_confirmar.Text != "Confirmar Password")
+            {
+                txt_confirmar.UseSystemPasswordChar = true;
+            }
+            pic_ocultado2.Enabled = true;
+            pic_ocultado2.Visible = true;
+            pic_mostrar2.Enabled = false;
+            pic_mostrar2.Visible = false;
+        }
+
+        private void pic_ocultado2_Click(object sender, EventArgs e)
+        {
+            if (txt_confirmar.Text != "Confirmar Password")
+            {
+                txt_confirmar.UseSystemPasswordChar = false;
+            }
+            pic_ocultado2.Enabled = false;
+            pic_ocultado2.Visible = false;
+            pic_mostrar2.Enabled = true;
+            pic_mostrar2.Visible = true;
+        }
+
+        private void pic_ocultado_Click(object sender, EventArgs e)
+        {
+            if (txt_password.Text != "Password")
+            {
+                txt_password.UseSystemPasswordChar = false;
+            }
+            pic_ocultado.Enabled = false;
+            pic_ocultado.Visible = false;
+            pic_mostrar.Enabled = true;
+            pic_mostrar.Visible = true;
+        }
+
+        private void txt_username_Click(object sender, EventArgs e)
+        {
+            this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__2_));
+            this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+            this.pic_confirmar.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+            this.pic_passe.Image = ((System.Drawing.Image)(Properties.Resources.id_card));
+            if (txt_username.Text == "Username")
+            {
+                txt_username.ResetText();
+                txt_username.Focus();
+            }
+        }
+
+        private void txt_password_Click(object sender, EventArgs e)
+        {
+            this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__2_));
+            this.pic_confirmar.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+            this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
+            this.pic_passe.Image = ((System.Drawing.Image)(Properties.Resources.id_card));
+            if (txt_password.Text == "Password")
+            {
+                txt_password.UseSystemPasswordChar = false;
+                txt_password.ResetText();
+                txt_password.Focus();
+            }
+        }
+
+        private void txt_confirmar_Click(object sender, EventArgs e)
+        {
+            this.pic_confirmar.Image = ((System.Drawing.Image)(Properties.Resources.padlock__2_));
+            this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+            this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
+            this.pic_passe.Image = ((System.Drawing.Image)(Properties.Resources.id_card));
+            if (txt_confirmar.Text == "Confirmar Password")
+            {
+                txt_confirmar.UseSystemPasswordChar = false;
+                txt_confirmar.ResetText();
+                txt_confirmar.Focus();
+            }
+        }
+
+        private void txt_passe_Click(object sender, EventArgs e)
+        {
+            this.pic_confirmar.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+            this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+            this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
+            this.pic_passe.Image = ((System.Drawing.Image)(Properties.Resources.id_card__1_));
+            if (txt_passe.Text == "Passe de Admin")
+            {
+                txt_passe.UseSystemPasswordChar = false;
+                txt_passe.ResetText();
+                txt_passe.Focus();
+            }
+        }
+
+        private void txt_username_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txt_password.Text == "Password")
+                {
+                    txt_password.UseSystemPasswordChar = false;
+                    txt_password.ResetText();
+                    txt_password.Focus();
+                    this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
+                    this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__2_));
+                    this.pic_confirmar.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+                    this.pic_passe.Image = ((System.Drawing.Image)(Properties.Resources.id_card));
+                }
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txt_password_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                if (txt_confirmar.Text == "Confirmar Password")
+                {
+                    txt_confirmar.UseSystemPasswordChar = false;
+                    txt_confirmar.ResetText();
+                    txt_confirmar.Focus();
+                    this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
+                    this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+                    this.pic_confirmar.Image = ((System.Drawing.Image)(Properties.Resources.padlock__2_));
+                    this.pic_passe.Image = ((System.Drawing.Image)(Properties.Resources.id_card));
+                }
+                e.SuppressKeyPress = true;
+            }
+        }
+
+        private void txt_confirmar_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btn_signup.PerformClick();
+                e.SuppressKeyPress = true;
+                this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
+                this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+                this.pic_confirmar.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+                this.pic_passe.Image = ((System.Drawing.Image)(Properties.Resources.id_card));
+            }
+        }
+
+        private void txt_username_TextChanged(object sender, EventArgs e)
+        {
+            txt_username.MaxLength = 10;
+            if (txt_username.Text != "" && txt_username.Text != "Username")
+            {
+                lbl_limpar.Visible = true;
+                lbl_limpar.Enabled = true;
+            }
+        }
+
+        private void txt_password_TextChanged(object sender, EventArgs e)
+        {
+            txt_password.MaxLength = 12;
+            if (txt_password.Text != "" && txt_password.Text != "Password")
+            {
+                lbl_limpar.Visible = true;
+                lbl_limpar.Enabled = true;
+            }
+        }
+
+        private void txt_confirmar_TextChanged(object sender, EventArgs e)
+        {
+            txt_confirmar.MaxLength = 12;
+            if (txt_confirmar.Text != "" && txt_confirmar.Text != "Confirmar Password")
+            {
+                lbl_limpar.Visible = true;
+                lbl_limpar.Enabled = true;
+            }
+        }
+
+        private void txt_passe_TextChanged(object sender, EventArgs e)
+        {
+            txt_passe.MaxLength = 13;
+            if (txt_passe.Text != "" && txt_passe.Text != "Passe de Admin")
+            {
+                lbl_limpar.Visible = true;
+                lbl_limpar.Enabled = true;
+            }
         }
     }
 }

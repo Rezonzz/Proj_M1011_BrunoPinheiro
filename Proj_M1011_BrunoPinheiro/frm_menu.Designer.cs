@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_menu));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.lbl_username = new System.Windows.Forms.Label();
+            this.btn_logout = new System.Windows.Forms.Button();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pic_minimize = new System.Windows.Forms.PictureBox();
             this.pic_close = new System.Windows.Forms.PictureBox();
@@ -38,7 +40,6 @@
             this.btn_autor = new System.Windows.Forms.Button();
             this.btn_consultar = new System.Windows.Forms.Button();
             this.btn_artigos = new System.Windows.Forms.Button();
-            this.lbl_username = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
@@ -63,6 +64,35 @@
             this.label2.Size = new System.Drawing.Size(116, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "JORDAN";
+            // 
+            // lbl_username
+            // 
+            this.lbl_username.Font = new System.Drawing.Font("Akira Expanded", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_username.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_username.Location = new System.Drawing.Point(12, 106);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(524, 19);
+            this.lbl_username.TabIndex = 9;
+            this.lbl_username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_logout
+            // 
+            this.btn_logout.FlatAppearance.BorderSize = 0;
+            this.btn_logout.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_logout.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_logout.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_logout.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.joordan9;
+            this.btn_logout.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_logout.Location = new System.Drawing.Point(464, 264);
+            this.btn_logout.Name = "btn_logout";
+            this.btn_logout.Size = new System.Drawing.Size(84, 67);
+            this.btn_logout.TabIndex = 10;
+            this.btn_logout.Text = "Log out";
+            this.btn_logout.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_logout.UseVisualStyleBackColor = true;
+            this.btn_logout.Click += new System.EventHandler(this.button1_Click);
+            this.btn_logout.MouseLeave += new System.EventHandler(this.btn_logout_MouseLeave);
+            this.btn_logout.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_logout_MouseMove);
             // 
             // pictureBox3
             // 
@@ -166,22 +196,13 @@
             this.btn_artigos.MouseLeave += new System.EventHandler(this.btn_artigos_MouseLeave);
             this.btn_artigos.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_artigos_MouseMove);
             // 
-            // lbl_username
-            // 
-            this.lbl_username.Font = new System.Drawing.Font("Akira Expanded", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_username.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_username.Location = new System.Drawing.Point(12, 106);
-            this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(524, 19);
-            this.lbl_username.TabIndex = 9;
-            this.lbl_username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // frm_menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(548, 331);
+            this.Controls.Add(this.btn_logout);
             this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.label2);
@@ -219,5 +240,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lbl_username;
+        private System.Windows.Forms.Button btn_logout;
     }
 }

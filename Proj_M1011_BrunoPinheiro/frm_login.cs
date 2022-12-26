@@ -11,6 +11,7 @@ using System.Windows.Forms;
 using System.Xml;
 using System.Xml.Linq;
 using System.IO;
+using System.Runtime.ConstrainedExecution;
 
 namespace Proj_M1011_BrunoPinheiro
 {
@@ -296,7 +297,8 @@ namespace Proj_M1011_BrunoPinheiro
                     txt_password.UseSystemPasswordChar = false;
                     txt_password.ResetText();
                     txt_password.Focus();
-
+                    this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
+                    this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__2_));
                 }
                 e.SuppressKeyPress = true;
             }
@@ -308,6 +310,8 @@ namespace Proj_M1011_BrunoPinheiro
             {
                 btn_login.PerformClick();
                 e.SuppressKeyPress = true;
+                this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
+                this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
             }
         }
     }
