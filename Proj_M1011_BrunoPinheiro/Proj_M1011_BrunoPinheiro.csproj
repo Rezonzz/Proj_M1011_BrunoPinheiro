@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="frm_artigos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_artigos.Designer.cs">
+      <DependentUpon>frm_artigos.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInfo.cs" />
     <Compile Include="frm_autor.cs">
       <SubType>Form</SubType>
@@ -85,6 +91,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frm_artigos.resx">
+      <DependentUpon>frm_artigos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_autor.resx">
       <DependentUpon>frm_autor.cs</DependentUpon>
     </EmbeddedResource>
@@ -235,13 +244,25 @@
     <None Include="Resources\padlock %282%29.png" />
     <None Include="Resources\account %282%29.png" />
     <None Include="Resources\id-card %281%29.png" />
-    <Content Include="login.xml" />
     <None Include="Resources\jordan9.png" />
     <None Include="Resources\jordaan9.png" />
     <None Include="Resources\jordann9.png" />
     <None Include="Resources\jordaan91.png" />
     <None Include="Resources\joordan9.png" />
     <None Include="Resources\jordan10.png" />
+    <Content Include="Produtos.xml" />
+    <None Include="Resources\add %281%29.png" />
+    <None Include="Resources\add %282%29.png" />
+    <None Include="Resources\refresh.png" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\add %283%29.png" />
+    <None Include="Resources\add %284%29.png" />
+    <None Include="Resources\refresh %281%29.png" />
+    <None Include="Resources\remove %281%29.png" />
+    <None Include="Resources\add %285%29.png" />
+    <None Include="Resources\x-button.png" />
+    <None Include="Resources\bin %281%29.png" />
+    <None Include="Resources\bin.png" />
     <Content Include="users.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

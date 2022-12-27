@@ -112,5 +112,12 @@ namespace Proj_M1011_BrunoPinheiro
         {
             this.btn_logout.Image = ((System.Drawing.Image)(Properties.Resources.joordan9));
         }
+
+        private void btn_artigos_Click(object sender, EventArgs e)
+        {
+            frm_artigos frm_artigos = new frm_artigos();
+            frm_artigos.Show();
+            this.Close();
+        }
     }
 }

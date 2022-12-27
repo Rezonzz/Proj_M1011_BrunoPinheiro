@@ -210,11 +210,11 @@
             // 
             this.lbl_name.AutoSize = true;
             this.lbl_name.BackColor = System.Drawing.Color.Transparent;
-            this.lbl_name.Font = new System.Drawing.Font("Microsoft YaHei UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_name.Font = new System.Drawing.Font("Akira Expanded", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_name.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.lbl_name.Location = new System.Drawing.Point(39, 5);
+            this.lbl_name.Location = new System.Drawing.Point(39, 6);
             this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(74, 19);
+            this.lbl_name.Size = new System.Drawing.Size(93, 16);
             this.lbl_name.TabIndex = 0;
             this.lbl_name.Text = "JORDAN";
             this.lbl_name.MouseLeave += new System.EventHandler(this.lbl_name_MouseLeave);

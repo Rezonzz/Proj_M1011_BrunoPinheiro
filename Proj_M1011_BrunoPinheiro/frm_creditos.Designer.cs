@@ -241,6 +241,7 @@
             // 
             // pic_close
             // 
+            this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_close.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.close;
             this.pic_close.Location = new System.Drawing.Point(310, 10);
             this.pic_close.Name = "pic_close";
@@ -262,6 +263,7 @@
             // 
             // pic_minimize
             // 
+            this.pic_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_minimize.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.minus_sign;
             this.pic_minimize.Location = new System.Drawing.Point(275, 10);
             this.pic_minimize.Name = "pic_minimize";

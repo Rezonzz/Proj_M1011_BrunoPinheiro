@@ -63,6 +63,7 @@
             // 
             // pic_github
             // 
+            this.pic_github.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_github.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.github_mark;
             this.pic_github.Location = new System.Drawing.Point(165, 122);
             this.pic_github.Name = "pic_github";
@@ -90,6 +91,7 @@
             // 
             // pic_close
             // 
+            this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_close.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.close;
             this.pic_close.Location = new System.Drawing.Point(12, 12);
             this.pic_close.Name = "pic_close";

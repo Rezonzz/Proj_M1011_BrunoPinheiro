@@ -106,6 +106,7 @@
             // 
             // pic_minimize
             // 
+            this.pic_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_minimize.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.minus_sign;
             this.pic_minimize.Location = new System.Drawing.Point(480, 18);
             this.pic_minimize.Name = "pic_minimize";
@@ -117,6 +118,7 @@
             // 
             // pic_close
             // 
+            this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_close.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.close;
             this.pic_close.Location = new System.Drawing.Point(516, 18);
             this.pic_close.Name = "pic_close";
@@ -193,6 +195,7 @@
             this.btn_artigos.Text = "Artigos";
             this.btn_artigos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_artigos.UseVisualStyleBackColor = true;
+            this.btn_artigos.Click += new System.EventHandler(this.btn_artigos_Click);
             this.btn_artigos.MouseLeave += new System.EventHandler(this.btn_artigos_MouseLeave);
             this.btn_artigos.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_artigos_MouseMove);
             // 
