@@ -34,6 +34,7 @@ namespace Proj_M1011_BrunoPinheiro
 
         public string FromXML_user;
         public string FromXML_password;
+        public string FromXML_passeAdm;
 
         private void pnl_top_MouseMove(object sender, MouseEventArgs e)
         {
@@ -155,12 +156,14 @@ namespace Proj_M1011_BrunoPinheiro
                                 select new
                                 {
                                     XMLuser = x.Element("username").Value,
-                                    XMLpassword = x.Element("password").Value
+                                    XMLpassword = x.Element("password").Value,
+                                    XMLpasseAdm = x.Element("passeAdm").Value
                                 };
             foreach (var x in selected_user)
             {
                 FromXML_user = x.XMLuser;
                 FromXML_password = x.XMLpassword;
+                FromXML_passeAdm = x.XMLpasseAdm;
             }
             if (txt_username.Text != "" || txt_username.Text != "Username")
             {
@@ -172,6 +175,7 @@ namespace Proj_M1011_BrunoPinheiro
                         {
                             UserInfo.Username_user = FromXML_user;
                             UserInfo.Password_user = FromXML_password;
+                            UserInfo.PasseAdm_user = FromXML_passeAdm;
                             frm_menu frm_menu = new frm_menu();
                             frm_menu.Show();
                             this.Hide();

@@ -207,6 +207,7 @@ namespace Proj_M1011_BrunoPinheiro
                                             }
                                             else if (ler.Value != txt_username.Text)
                                             {
+                                                ler.Close();
                                                 XmlDocument xmlDoc = new XmlDocument();
                                                 xmlDoc.Load("users.xml");
                                                 XmlElement novoelemento = xmlDoc.CreateElement("users");
