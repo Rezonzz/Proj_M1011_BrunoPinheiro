@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="refresh (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="add (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -132,6 +135,12 @@
   </data>
   <data name="close (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jordan15" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jordan15.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jordan13" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jordan13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="bin (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\bin (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -148,9 +157,6 @@
   <data name="jordaan9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jordaan9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="jordan11" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jordan11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="close (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -162,9 +168,6 @@
   </data>
   <data name="jordan61" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jordan61.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="bin" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\bin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="jordann9" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jordann9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +181,14 @@
   <data name="rsz_584292c4a6515b1e0ad75aca" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rsz_584292c4a6515b1e0ad75aca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="jordan9" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jordan9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="id-card" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\id-card.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jordaan91" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jordaan91.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ezgif.com-gif-maker (42)_clipdrop-background-removal" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ezgif.com-gif-maker (42)_clipdrop-background-removal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,20 +196,20 @@
   <data name="jordan2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jordan2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="jordan6" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jordan6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="padlock (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\padlock (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="add (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\add (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rsz_1nike-air-jordan-3-grateful-by-khaled-580775-601-1-550x550_clipdrop-background-removal" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rsz_1nike-air-jordan-3-grateful-by-khaled-580775-601-1-550x550_clipdrop-background-removal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="hide (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\hide (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="jordan9" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jordan9.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="jordan11" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jordan11.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="rsz_3ezgifcom-gif-maker_41_clipdrop-enhance_clipdrop-background-removal_clipdrop-enhance" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\rsz_3ezgifcom-gif-maker_41_clipdrop-enhance_clipdrop-background-removal_clipdrop-enhance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -220,8 +229,8 @@
   <data name="jordan5" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jordan5.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="jordan8" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jordan8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="jordan4" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jordan4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="minus" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minus.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -232,11 +241,11 @@
   <data name="account (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\account (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rsz_ezgifcom-gif-maker_40_clipdrop-background-removal_clipdrop-enhance" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rsz_ezgifcom-gif-maker_40_clipdrop-background-removal_clipdrop-enhance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="584292c4a6515b1e0ad75aca" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\584292c4a6515b1e0ad75aca.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="jordan12" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jordan12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="jordan51" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jordan51.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -253,8 +262,8 @@
   <data name="89bb09f2-001c-4dd1-a9cd-010eab46d781" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\89bb09f2-001c-4dd1-a9cd-010eab46d781.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="rsz_1nike-air-jordan-3-grateful-by-khaled-580775-601-1-550x550_clipdrop-background-removal" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\rsz_1nike-air-jordan-3-grateful-by-khaled-580775-601-1-550x550_clipdrop-background-removal.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="jordan14" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jordan14.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="view" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\view.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -262,8 +271,8 @@
   <data name="jordan3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\jordan3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="jordan4" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jordan4.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="rsz_ezgifcom-gif-maker_40_clipdrop-background-removal_clipdrop-enhance" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\rsz_ezgifcom-gif-maker_40_clipdrop-background-removal_clipdrop-enhance.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="add (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\add (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,28 +280,28 @@
   <data name="minus-sign" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\minus-sign.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="refresh (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="bin" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\bin.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="584292c4a6515b1e0ad75aca1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\584292c4a6515b1e0ad75aca1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="jordan13" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jordan13.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="jordan6" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jordan6.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="padlock (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\padlock (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="remove" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\remove.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="jordan8" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jordan8.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="close (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\close (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="jordaan91" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jordaan91.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="add (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\add (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="jordan12" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\jordan12.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="jordan16" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\jordan16.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

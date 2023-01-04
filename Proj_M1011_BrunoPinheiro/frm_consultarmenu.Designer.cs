@@ -111,7 +111,7 @@
             this.btn_artigos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
             this.btn_artigos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_artigos.Font = new System.Drawing.Font("Futura-Heavy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_artigos.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.jordan3;
+            this.btn_artigos.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.jordan16;
             this.btn_artigos.Location = new System.Drawing.Point(163, 109);
             this.btn_artigos.Name = "btn_artigos";
             this.btn_artigos.Size = new System.Drawing.Size(110, 128);
@@ -120,6 +120,8 @@
             this.btn_artigos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_artigos.UseVisualStyleBackColor = true;
             this.btn_artigos.Click += new System.EventHandler(this.btn_artigos_Click);
+            this.btn_artigos.MouseLeave += new System.EventHandler(this.btn_artigos_MouseLeave);
+            this.btn_artigos.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_artigos_MouseMove);
             // 
             // btn_voltar
             // 

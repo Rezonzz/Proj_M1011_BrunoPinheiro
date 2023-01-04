@@ -185,7 +185,7 @@
             // lbl_média
             // 
             this.lbl_média.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_média.Location = new System.Drawing.Point(70, 280);
+            this.lbl_média.Location = new System.Drawing.Point(67, 280);
             this.lbl_média.Name = "lbl_média";
             this.lbl_média.Size = new System.Drawing.Size(203, 27);
             this.lbl_média.TabIndex = 40;
@@ -196,7 +196,7 @@
             // 
             this.lbl_median.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lbl_median.ForeColor = System.Drawing.SystemColors.ControlDark;
-            this.lbl_median.Location = new System.Drawing.Point(55, 309);
+            this.lbl_median.Location = new System.Drawing.Point(52, 309);
             this.lbl_median.Name = "lbl_median";
             this.lbl_median.Size = new System.Drawing.Size(233, 24);
             this.lbl_median.TabIndex = 41;

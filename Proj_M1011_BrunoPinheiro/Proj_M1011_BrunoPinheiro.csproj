@@ -293,6 +293,9 @@
     <None Include="Resources\jordan13.png" />
     <None Include="Resources\jordan11.png" />
     <None Include="Resources\jordan12.png" />
+    <None Include="Resources\jordan14.png" />
+    <None Include="Resources\jordan15.png" />
+    <None Include="Resources\jordan16.png" />
     <Content Include="users.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

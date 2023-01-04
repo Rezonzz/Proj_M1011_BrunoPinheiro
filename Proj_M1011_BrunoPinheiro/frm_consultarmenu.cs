@@ -82,5 +82,15 @@ namespace Proj_M1011_BrunoPinheiro
             frm_consultarartigos.Show();
             this.Close();
         }
+
+        private void btn_artigos_MouseLeave(object sender, EventArgs e)
+        {
+            this.btn_artigos.Image = ((System.Drawing.Image)(Properties.Resources.jordan16));
+        }
+
+        private void btn_artigos_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.btn_artigos.Image = ((System.Drawing.Image)(Properties.Resources.jordan15));
+        }
     }
 }
