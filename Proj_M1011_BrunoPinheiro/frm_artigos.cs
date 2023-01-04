@@ -45,10 +45,21 @@ namespace Proj_M1011_BrunoPinheiro
 
         public void CarregaDadosXML()
         {
-            DataSet ds = new DataSet();
-            ds.ReadXml("Produtos.xml");
-            dgv_produtos.DataSource = ds;
-            dgv_produtos.DataMember = "Artigos";
+            XmlDocument xmldoc = new XmlDocument();
+            xmldoc.Load("Produtos.xml");
+
+            int count = xmldoc.SelectNodes("Produtos/Artigos").Count;
+            if (count != 0)
+            {
+                DataSet ds = new DataSet();
+                ds.ReadXml("Produtos.xml");
+                dgv_produtos.DataSource = ds;
+                dgv_produtos.DataMember = "Artigos";
+            }
+            else
+            {
+                dgv_produtos.DataSource = null;
+            }
         }
 
         private void frm_artigos_Load(object sender, EventArgs e)
@@ -257,27 +268,26 @@ namespace Proj_M1011_BrunoPinheiro
             }
         }
 
-        private void btn_eliminartudo_MouseMove(object sender, MouseEventArgs e)
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+        private void pnl_top_MouseDown(object sender, MouseEventArgs e)
         {
-            btn_eliminartudo.BackColor = Color.Black;
-            btn_eliminartudo.ForeColor = Color.White;
-            this.btn_eliminartudo.Image = ((System.Drawing.Image)(Properties.Resources.bin__1_));
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btn_eliminartudo_MouseLeave(object sender, EventArgs e)
+        private void pic_logo_MouseDown(object sender, MouseEventArgs e)
         {
-            btn_eliminartudo.BackColor = Color.White;
-            btn_eliminartudo.ForeColor = Color.Black;
-            this.btn_eliminartudo.Image = ((System.Drawing.Image)(Properties.Resources.bin));
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        private void btn_eliminartudo_Click(object sender, EventArgs e)
+        private void lbl_name_MouseDown(object sender, MouseEventArgs e)
         {
-            XmlDocument xmldoc = new XmlDocument();
-            xmldoc.Load("Produtos.xml");
-
-            XmlElement root = xmldoc.DocumentElement;
-            root.RemoveAll();
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

@@ -44,28 +44,11 @@ namespace Proj_M1011_BrunoPinheiro
             pnl_passe.Visible = true;
         }
 
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-            frm_login frm_login = new frm_login();
-            frm_login.Show();
-            this.Close();
-        }
-
-        private void btn_minimize_Click(object sender, EventArgs e)
-        {
-            WindowState = FormWindowState.Minimized;
-        }
-
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        private void pnl_top_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-            pnl_top.BackColor = Color.FromArgb(220, 220, 220);
-        }
+
 
         private void rad_nao_CheckedChanged(object sender, EventArgs e)
         {
@@ -98,56 +81,6 @@ namespace Proj_M1011_BrunoPinheiro
         {
             btn_signup.BackColor = Color.White;
             btn_signup.ForeColor = Color.Black;
-        }
-
-        private void pnl_top_MouseMove(object sender, MouseEventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(220, 220, 220);
-        }
-
-        private void pnl_top_MouseLeave(object sender, EventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(255, 255, 255);
-        }
-
-        private void lbl_name_MouseMove(object sender, MouseEventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(220, 220, 220);
-        }
-
-        private void pic_logo_MouseMove(object sender, MouseEventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(220, 220, 220);
-        }
-
-        private void btn_minimize_MouseMove(object sender, MouseEventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(220, 220, 220);
-        }
-
-        private void btn_close_MouseMove(object sender, MouseEventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(220, 220, 220);
-        }
-
-        private void btn_close_MouseLeave(object sender, EventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(255, 255, 255);
-        }
-
-        private void btn_minimize_MouseLeave(object sender, EventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(255, 255, 255);
-        }
-
-        private void lbl_name_MouseLeave(object sender, EventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(255, 255, 255);
-        }
-
-        private void pic_logo_MouseLeave(object sender, EventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(255, 255, 255);
         }
 
         private void btn_login_Click(object sender, EventArgs e)
@@ -381,7 +314,7 @@ namespace Proj_M1011_BrunoPinheiro
             this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
             this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
             this.pic_passe.Image = ((System.Drawing.Image)(Properties.Resources.id_card__1_));
-            if (txt_passe.Text == "Passe de Admin")
+            if (txt_passe.Text == "Passe de Gestor")
             {
                 txt_passe.UseSystemPasswordChar = false;
                 txt_passe.ResetText();
@@ -471,11 +404,45 @@ namespace Proj_M1011_BrunoPinheiro
         private void txt_passe_TextChanged(object sender, EventArgs e)
         {
             txt_passe.MaxLength = 13;
-            if (txt_passe.Text != "" && txt_passe.Text != "Passe de Admin")
+            if (txt_passe.Text != "" && txt_passe.Text != "Passe de Gestor")
             {
                 lbl_limpar.Visible = true;
                 lbl_limpar.Enabled = true;
             }
+        }
+
+        private void pic_close_Click(object sender, EventArgs e)
+        {
+            frm_login frm_login = new frm_login();
+            frm_login.Show();
+            this.Close();
+        }
+
+        private void pnl_top_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pic_minimize_Click(object sender, EventArgs e)
+        {
+            this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
+            this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+            this.pic_confirmar.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+            this.pic_passe.Image = ((System.Drawing.Image)(Properties.Resources.id_card));
+            WindowState = FormWindowState.Minimized;
+        }
+
+        private void lbl_name_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pic_logo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

@@ -36,68 +36,6 @@ namespace Proj_M1011_BrunoPinheiro
         public string FromXML_password;
         public string FromXML_passeAdm;
 
-        private void pnl_top_MouseMove(object sender, MouseEventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(220, 220, 220);
-        }
-
-        private void pnl_top_MouseLeave(object sender, EventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(255, 255, 255);
-        }
-
-        private void lbl_name_MouseMove(object sender, MouseEventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(220, 220, 220);
-        }
-
-        private void lbl_name_MouseLeave(object sender, EventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(255, 255, 255);
-        }
-
-        private void pic_logo_MouseMove(object sender, MouseEventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(220, 220, 220);
-        }
-
-        private void pic_logo_MouseLeave(object sender, EventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(255, 255, 255);
-        }
-
-        private void btn_close_MouseMove(object sender, MouseEventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(220, 220, 220);
-        }
-
-        private void btn_minimize_MouseMove(object sender, MouseEventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(220, 220, 220);
-        }
-
-        private void btn_minimize_MouseLeave(object sender, EventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(255, 255, 255);
-        }
-
-        private void btn_close_MouseLeave(object sender, EventArgs e)
-        {
-            pnl_top.BackColor = Color.FromArgb(255, 255, 255);
-        }
-
-        private void btn_close_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
-        private void btn_minimize_Click(object sender, EventArgs e)
-        {
-            this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
-            this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
-            WindowState = FormWindowState.Minimized;
-        }
-
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
@@ -106,7 +44,6 @@ namespace Proj_M1011_BrunoPinheiro
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
-            pnl_top.BackColor = Color.FromArgb(220, 220, 220);
         }
 
         private void btn_login_MouseMove(object sender, MouseEventArgs e)
@@ -119,18 +56,6 @@ namespace Proj_M1011_BrunoPinheiro
         {
             btn_login.BackColor = Color.White;
             btn_login.ForeColor = Color.Black;
-        }
-
-        private void lbl_name_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
-        }
-
-        private void pic_logo_MouseDown(object sender, MouseEventArgs e)
-        {
-            ReleaseCapture();
-            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
         private void lbl_sair_Click(object sender, EventArgs e)
@@ -176,9 +101,18 @@ namespace Proj_M1011_BrunoPinheiro
                             UserInfo.Username_user = FromXML_user;
                             UserInfo.Password_user = FromXML_password;
                             UserInfo.PasseAdm_user = FromXML_passeAdm;
-                            frm_menu frm_menu = new frm_menu();
-                            frm_menu.Show();
-                            this.Hide();
+                            if(FromXML_passeAdm == "y")
+                            {
+                                frm_menu frm_menu = new frm_menu();
+                                frm_menu.Show();
+                                this.Hide();
+                            }
+                            else
+                            {
+                                frm_menu2 frm_menu2 = new frm_menu2();
+                                frm_menu2.Show();
+                                this.Hide();
+                            }
                         }
                         else
                         {
@@ -317,6 +251,30 @@ namespace Proj_M1011_BrunoPinheiro
                 this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
                 this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
             }
+        }
+
+        private void lbl_name_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pic_logo_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pic_close_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void pic_minimize_Click(object sender, EventArgs e)
+        {
+            this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
+            this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
+            WindowState = FormWindowState.Minimized;
         }
     }
 }

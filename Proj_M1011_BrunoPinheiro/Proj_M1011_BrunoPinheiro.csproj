@@ -52,6 +52,24 @@
     <Compile Include="frm_artigos.Designer.cs">
       <DependentUpon>frm_artigos.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_consultarartigos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_consultarartigos.Designer.cs">
+      <DependentUpon>frm_consultarartigos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_consultarmenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_consultarmenu.Designer.cs">
+      <DependentUpon>frm_consultarmenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frm_menu2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_menu2.Designer.cs">
+      <DependentUpon>frm_menu2.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserInfo.cs" />
     <Compile Include="frm_autor.cs">
       <SubType>Form</SubType>
@@ -97,6 +115,12 @@
     <EmbeddedResource Include="frm_autor.resx">
       <DependentUpon>frm_autor.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frm_consultarartigos.resx">
+      <DependentUpon>frm_consultarartigos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_consultarmenu.resx">
+      <DependentUpon>frm_consultarmenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frm_creditos.resx">
       <DependentUpon>frm_creditos.cs</DependentUpon>
     </EmbeddedResource>
@@ -105,6 +129,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_menu.resx">
       <DependentUpon>frm_menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_menu2.resx">
+      <DependentUpon>frm_menu2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_sair.resx">
       <DependentUpon>frm_sair.cs</DependentUpon>
@@ -263,6 +290,9 @@
     <None Include="Resources\x-button.png" />
     <None Include="Resources\bin %281%29.png" />
     <None Include="Resources\bin.png" />
+    <None Include="Resources\jordan13.png" />
+    <None Include="Resources\jordan11.png" />
+    <None Include="Resources\jordan12.png" />
     <Content Include="users.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

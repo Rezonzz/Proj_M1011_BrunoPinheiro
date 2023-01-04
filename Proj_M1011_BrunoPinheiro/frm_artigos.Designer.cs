@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_artigos));
-            this.label2 = new System.Windows.Forms.Label();
+            this.lbl_name = new System.Windows.Forms.Label();
             this.txt_codigo = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -41,28 +41,30 @@
             this.txt_quantidade = new System.Windows.Forms.TextBox();
             this.dgv_produtos = new System.Windows.Forms.DataGridView();
             this.cbo_tamanho = new System.Windows.Forms.ComboBox();
-            this.btn_eliminartudo = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_alterar = new System.Windows.Forms.Button();
             this.btn_adicionar = new System.Windows.Forms.Button();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pic_logo = new System.Windows.Forms.PictureBox();
             this.pic_minimize = new System.Windows.Forms.PictureBox();
             this.pic_close = new System.Windows.Forms.PictureBox();
+            this.pnl_top = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_produtos)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
+            this.pnl_top.SuspendLayout();
             this.SuspendLayout();
             // 
-            // label2
+            // lbl_name
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Akira Expanded", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(48, 12);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(116, 20);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "JORDAN";
+            this.lbl_name.AutoSize = true;
+            this.lbl_name.Font = new System.Drawing.Font("Akira Expanded", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_name.Location = new System.Drawing.Point(48, 14);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(116, 20);
+            this.lbl_name.TabIndex = 11;
+            this.lbl_name.Text = "JORDAN";
+            this.lbl_name.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbl_name_MouseDown);
             // 
             // txt_codigo
             // 
@@ -185,24 +187,6 @@
             this.cbo_tamanho.Size = new System.Drawing.Size(159, 28);
             this.cbo_tamanho.TabIndex = 27;
             // 
-            // btn_eliminartudo
-            // 
-            this.btn_eliminartudo.FlatAppearance.BorderSize = 0;
-            this.btn_eliminartudo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_eliminartudo.Font = new System.Drawing.Font("Futura-Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_eliminartudo.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.bin;
-            this.btn_eliminartudo.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_eliminartudo.Location = new System.Drawing.Point(526, 359);
-            this.btn_eliminartudo.Name = "btn_eliminartudo";
-            this.btn_eliminartudo.Size = new System.Drawing.Size(117, 67);
-            this.btn_eliminartudo.TabIndex = 28;
-            this.btn_eliminartudo.Text = "Eliminar Tudo";
-            this.btn_eliminartudo.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_eliminartudo.UseVisualStyleBackColor = true;
-            this.btn_eliminartudo.Click += new System.EventHandler(this.btn_eliminartudo_Click);
-            this.btn_eliminartudo.MouseLeave += new System.EventHandler(this.btn_eliminartudo_MouseLeave);
-            this.btn_eliminartudo.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_eliminartudo_MouseMove);
-            // 
             // btn_eliminar
             // 
             this.btn_eliminar.FlatAppearance.BorderSize = 0;
@@ -210,7 +194,7 @@
             this.btn_eliminar.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_eliminar.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.remove;
             this.btn_eliminar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_eliminar.Location = new System.Drawing.Point(425, 359);
+            this.btn_eliminar.Location = new System.Drawing.Point(477, 357);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(101, 67);
             this.btn_eliminar.TabIndex = 26;
@@ -228,7 +212,7 @@
             this.btn_alterar.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_alterar.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.refresh;
             this.btn_alterar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_alterar.Location = new System.Drawing.Point(324, 359);
+            this.btn_alterar.Location = new System.Drawing.Point(376, 357);
             this.btn_alterar.Name = "btn_alterar";
             this.btn_alterar.Size = new System.Drawing.Size(101, 67);
             this.btn_alterar.TabIndex = 25;
@@ -246,7 +230,7 @@
             this.btn_adicionar.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_adicionar.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.add__2_;
             this.btn_adicionar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_adicionar.Location = new System.Drawing.Point(223, 359);
+            this.btn_adicionar.Location = new System.Drawing.Point(275, 357);
             this.btn_adicionar.Name = "btn_adicionar";
             this.btn_adicionar.Size = new System.Drawing.Size(101, 67);
             this.btn_adicionar.TabIndex = 24;
@@ -257,21 +241,22 @@
             this.btn_adicionar.MouseLeave += new System.EventHandler(this.btn_adicionar_MouseLeave);
             this.btn_adicionar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_adicionar_MouseMove);
             // 
-            // pictureBox3
+            // pic_logo
             // 
-            this.pictureBox3.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources._584292c4a6515b1e0ad75aca1;
-            this.pictureBox3.Location = new System.Drawing.Point(10, 6);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(32, 32);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox3.TabIndex = 12;
-            this.pictureBox3.TabStop = false;
+            this.pic_logo.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources._584292c4a6515b1e0ad75aca1;
+            this.pic_logo.Location = new System.Drawing.Point(10, 8);
+            this.pic_logo.Name = "pic_logo";
+            this.pic_logo.Size = new System.Drawing.Size(32, 32);
+            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_logo.TabIndex = 12;
+            this.pic_logo.TabStop = false;
+            this.pic_logo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_logo_MouseDown);
             // 
             // pic_minimize
             // 
             this.pic_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_minimize.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.minus_sign;
-            this.pic_minimize.Location = new System.Drawing.Point(600, 12);
+            this.pic_minimize.Location = new System.Drawing.Point(600, 14);
             this.pic_minimize.Name = "pic_minimize";
             this.pic_minimize.Size = new System.Drawing.Size(20, 20);
             this.pic_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -283,7 +268,7 @@
             // 
             this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_close.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.close;
-            this.pic_close.Location = new System.Drawing.Point(636, 12);
+            this.pic_close.Location = new System.Drawing.Point(636, 14);
             this.pic_close.Name = "pic_close";
             this.pic_close.Size = new System.Drawing.Size(20, 20);
             this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -291,13 +276,26 @@
             this.pic_close.TabStop = false;
             this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
             // 
+            // pnl_top
+            // 
+            this.pnl_top.Controls.Add(this.lbl_name);
+            this.pnl_top.Controls.Add(this.pic_close);
+            this.pnl_top.Controls.Add(this.pic_minimize);
+            this.pnl_top.Controls.Add(this.pic_logo);
+            this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_top.Location = new System.Drawing.Point(0, 0);
+            this.pnl_top.Name = "pnl_top";
+            this.pnl_top.Size = new System.Drawing.Size(668, 52);
+            this.pnl_top.TabIndex = 28;
+            this.pnl_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_top_MouseDown);
+            // 
             // frm_artigos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(668, 438);
-            this.Controls.Add(this.btn_eliminartudo);
+            this.Controls.Add(this.pnl_top);
             this.Controls.Add(this.cbo_tamanho);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_alterar);
@@ -312,10 +310,6 @@
             this.Controls.Add(this.txt_nome);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txt_codigo);
-            this.Controls.Add(this.pictureBox3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.pic_minimize);
-            this.Controls.Add(this.pic_close);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
@@ -324,9 +318,11 @@
             this.Text = "Jordan - Artigos";
             this.Load += new System.EventHandler(this.frm_artigos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_produtos)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
+            this.pnl_top.ResumeLayout(false);
+            this.pnl_top.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -334,8 +330,8 @@
 
         #endregion
 
-        private System.Windows.Forms.PictureBox pictureBox3;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pic_logo;
+        private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.PictureBox pic_minimize;
         private System.Windows.Forms.PictureBox pic_close;
         private System.Windows.Forms.TextBox txt_codigo;
@@ -352,6 +348,6 @@
         private System.Windows.Forms.Button btn_alterar;
         private System.Windows.Forms.Button btn_eliminar;
         private System.Windows.Forms.ComboBox cbo_tamanho;
-        private System.Windows.Forms.Button btn_eliminartudo;
+        private System.Windows.Forms.Panel pnl_top;
     }
 }

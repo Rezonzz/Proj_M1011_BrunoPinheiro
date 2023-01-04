@@ -35,9 +35,11 @@
             this.btn_creditos = new System.Windows.Forms.Button();
             this.pic_close = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pnl_top = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.pic_github)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.pnl_top.SuspendLayout();
             this.SuspendLayout();
             // 
             // label1
@@ -93,7 +95,7 @@
             // 
             this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pic_close.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.close;
-            this.pic_close.Location = new System.Drawing.Point(12, 12);
+            this.pic_close.Location = new System.Drawing.Point(12, 9);
             this.pic_close.Name = "pic_close";
             this.pic_close.Size = new System.Drawing.Size(24, 24);
             this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -111,18 +113,28 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // pnl_top
+            // 
+            this.pnl_top.Controls.Add(this.pic_close);
+            this.pnl_top.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_top.Location = new System.Drawing.Point(0, 0);
+            this.pnl_top.Name = "pnl_top";
+            this.pnl_top.Size = new System.Drawing.Size(593, 43);
+            this.pnl_top.TabIndex = 11;
+            this.pnl_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_top_MouseDown);
+            // 
             // frm_autor
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(593, 335);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pnl_top);
             this.Controls.Add(this.pic_github);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btn_creditos);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pic_close);
-            this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "frm_autor";
@@ -131,6 +143,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pic_github)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.pnl_top.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -144,5 +157,6 @@
         private System.Windows.Forms.Button btn_creditos;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pic_github;
+        private System.Windows.Forms.Panel pnl_top;
     }
 }
