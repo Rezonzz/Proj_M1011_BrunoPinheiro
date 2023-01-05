@@ -49,6 +49,8 @@
             this.pic_password = new System.Windows.Forms.PictureBox();
             this.pic_username = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbl_username = new System.Windows.Forms.Label();
+            this.lbl_password = new System.Windows.Forms.Label();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
@@ -141,8 +143,6 @@
             this.lbl_invalido.Name = "lbl_invalido";
             this.lbl_invalido.Size = new System.Drawing.Size(236, 32);
             this.lbl_invalido.TabIndex = 57;
-            this.lbl_invalido.Text = "Username ou Password Inválidos";
-            this.lbl_invalido.Visible = false;
             // 
             // txt_password
             // 
@@ -306,12 +306,36 @@
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // lbl_username
+            // 
+            this.lbl_username.AutoSize = true;
+            this.lbl_username.Font = new System.Drawing.Font("Futura-Heavy", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_username.Location = new System.Drawing.Point(87, 223);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(75, 19);
+            this.lbl_username.TabIndex = 61;
+            this.lbl_username.Text = "Username";
+            this.lbl_username.Visible = false;
+            // 
+            // lbl_password
+            // 
+            this.lbl_password.AutoSize = true;
+            this.lbl_password.Font = new System.Drawing.Font("Futura-Heavy", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_password.Location = new System.Drawing.Point(87, 298);
+            this.lbl_password.Name = "lbl_password";
+            this.lbl_password.Size = new System.Drawing.Size(71, 19);
+            this.lbl_password.TabIndex = 62;
+            this.lbl_password.Text = "Password";
+            this.lbl_password.Visible = false;
+            // 
             // frm_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(337, 514);
+            this.Controls.Add(this.lbl_password);
+            this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.pic_mostrar);
             this.Controls.Add(this.pic_ocultado);
             this.Controls.Add(this.lbl_registrar);
@@ -372,6 +396,8 @@
         private System.Windows.Forms.PictureBox pic_close;
         private System.Windows.Forms.PictureBox pic_logo;
         private System.Windows.Forms.PictureBox pic_minimize;
+        private System.Windows.Forms.Label lbl_username;
+        private System.Windows.Forms.Label lbl_password;
     }
 }
 

@@ -313,6 +313,26 @@ namespace Proj_M1011_BrunoPinheiro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap information {
+            get {
+                object obj = ResourceManager.GetObject("information", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap information__1_ {
+            get {
+                object obj = ResourceManager.GetObject("information (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap joordan9 {
             get {
                 object obj = ResourceManager.GetObject("joordan9", resourceCulture);
@@ -416,6 +436,26 @@ namespace Proj_M1011_BrunoPinheiro.Properties {
         internal static System.Drawing.Bitmap jordan16 {
             get {
                 object obj = ResourceManager.GetObject("jordan16", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jordan17 {
+            get {
+                object obj = ResourceManager.GetObject("jordan17", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jordan18 {
+            get {
+                object obj = ResourceManager.GetObject("jordan18", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

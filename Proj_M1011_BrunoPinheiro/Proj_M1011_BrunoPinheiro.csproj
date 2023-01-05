@@ -64,6 +64,12 @@
     <Compile Include="frm_consultarmenu.Designer.cs">
       <DependentUpon>frm_consultarmenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_consultarstock.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_consultarstock.Designer.cs">
+      <DependentUpon>frm_consultarstock.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_menu2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -120,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_consultarmenu.resx">
       <DependentUpon>frm_consultarmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_consultarstock.resx">
+      <DependentUpon>frm_consultarstock.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_creditos.resx">
       <DependentUpon>frm_creditos.cs</DependentUpon>
@@ -296,6 +305,10 @@
     <None Include="Resources\jordan14.png" />
     <None Include="Resources\jordan15.png" />
     <None Include="Resources\jordan16.png" />
+    <None Include="Resources\jordan17.png" />
+    <None Include="Resources\jordan18.png" />
+    <None Include="Resources\information.png" />
+    <None Include="Resources\information %281%29.png" />
     <Content Include="users.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

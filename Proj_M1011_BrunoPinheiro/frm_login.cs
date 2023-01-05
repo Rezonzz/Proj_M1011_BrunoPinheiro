@@ -116,22 +116,38 @@ namespace Proj_M1011_BrunoPinheiro
                         }
                         else
                         {
-                            MessageBox.Show("pass errada");
+                            lbl_invalido.Text = "Password Inválida!";
+                            lbl_password.Visible = true;
+                            txt_password.Focus();
+                            txt_password.ResetText();
+                            this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__2_));
                         }
                     }
                     else
                     {
-                        MessageBox.Show("user errado");
+                        lbl_invalido.Text = "Username Inválido!";
+                        lbl_username.Visible = true;
+                        txt_username.Focus();
+                        txt_username.ResetText();
+                        this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__2_));
                     }
                 }
                 else
                 {
-                    MessageBox.Show("user vazio");
+                    lbl_invalido.Text = "Username Vazio!";
+                    lbl_username.Visible = true;
+                    txt_username.Focus();
+                    txt_username.ResetText();
+                    this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__2_));
                 }
             }
             else
             {
-                MessageBox.Show("password vazia");
+                lbl_invalido.Text = "Password Vazia!";
+                lbl_password.Visible = true;
+                txt_password.Focus();
+                txt_password.ResetText();
+                this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__2_));
             }
         }
 
@@ -164,6 +180,8 @@ namespace Proj_M1011_BrunoPinheiro
             pic_mostrar.Visible = true;
             lbl_limpar.Visible = false;
             lbl_limpar.Enabled = false;
+            lbl_username.Visible = true;
+            lbl_password.Visible = false;
         }
 
         private void pic_ocultado_Click(object sender, EventArgs e)
@@ -186,6 +204,14 @@ namespace Proj_M1011_BrunoPinheiro
             {
                 txt_username.ResetText();
                 txt_username.Focus();
+                lbl_username.Visible = true;
+            }
+
+            if(txt_password.Text == "")
+            {
+                txt_password.Text = "Password";
+                txt_password.UseSystemPasswordChar = true;
+                lbl_password.Visible = false;
             }
         }
 
@@ -198,6 +224,12 @@ namespace Proj_M1011_BrunoPinheiro
                 txt_password.UseSystemPasswordChar = false;
                 txt_password.ResetText();
                 txt_password.Focus();
+                lbl_password.Visible = true;
+            }
+            if (txt_username.Text == "")
+            {
+                txt_username.Text = "Username";
+                lbl_username.Visible = false;
             }
         }
 
@@ -213,6 +245,7 @@ namespace Proj_M1011_BrunoPinheiro
             {
                 lbl_limpar.Visible = true;
                 lbl_limpar.Enabled = true;
+                lbl_username.Visible = true;
             }
         }
 
@@ -223,6 +256,7 @@ namespace Proj_M1011_BrunoPinheiro
             {
                 lbl_limpar.Visible = true;
                 lbl_limpar.Enabled = true;
+                lbl_password.Visible = true;
             }
         }
 
@@ -235,6 +269,20 @@ namespace Proj_M1011_BrunoPinheiro
                     txt_password.UseSystemPasswordChar = false;
                     txt_password.ResetText();
                     txt_password.Focus();
+                    lbl_password.Visible = true;
+                    if (txt_username.Text == "")
+                    {
+                        txt_username.Text = "Username";
+                        lbl_username.Visible = false;
+                    }
+                    this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
+                    this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__2_));
+                }
+                else
+                {
+                    txt_password.UseSystemPasswordChar = false;
+                    txt_password.Focus();
+                    lbl_password.Visible = true;
                     this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
                     this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__2_));
                 }
@@ -246,6 +294,10 @@ namespace Proj_M1011_BrunoPinheiro
         {
             if (e.KeyCode == Keys.Enter)
             {
+                if (txt_password.Text == "")
+                {
+                    lbl_password.Visible = false;
+                }
                 btn_login.PerformClick();
                 e.SuppressKeyPress = true;
                 this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));

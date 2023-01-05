@@ -92,5 +92,38 @@ namespace Proj_M1011_BrunoPinheiro
         {
             this.btn_artigos.Image = ((System.Drawing.Image)(Properties.Resources.jordan15));
         }
+
+        private void btn_stock_Click(object sender, EventArgs e)
+        {
+            frm_consultarstock frm_consultarstock = new frm_consultarstock();
+            frm_consultarstock.Show();
+            this.Close();
+        }
+
+        private void btn_stock_MouseMove(object sender, MouseEventArgs e)
+        {
+            this.btn_stock.Image = ((System.Drawing.Image)(Properties.Resources.jordan17));
+        }
+
+        private void btn_stock_MouseLeave(object sender, EventArgs e)
+        {
+            this.btn_stock.Image = ((System.Drawing.Image)(Properties.Resources.jordan18));
+        }
+
+        private void pic_close_Click(object sender, EventArgs e)
+        {
+            if (UserInfo.PasseAdm_user == "y")
+            {
+                frm_menu frm_menu = new frm_menu();
+                frm_menu.Show();
+                this.Close();
+            }
+            else
+            {
+                frm_menu2 frm_menu2 = new frm_menu2();
+                frm_menu2.Show();
+                this.Close();
+            }
+        }
     }
 }

@@ -12,7 +12,7 @@ using System.Xml;
 
 namespace Proj_M1011_BrunoPinheiro
 {
-    public partial class frm_consultarartigos : Form
+    public partial class frm_consultarstock : Form
     {
         [DllImport("Gdi32.dll", EntryPoint = "CreateRoundRectRgn")]
         private static extern IntPtr CreateRoundRectRgn
@@ -24,11 +24,16 @@ namespace Proj_M1011_BrunoPinheiro
            int nWidthEllipse,
            int nHeightEllipse
        );
-        public frm_consultarartigos()
+        public frm_consultarstock()
         {
             InitializeComponent();
             Region = System.Drawing.Region.FromHrgn(CreateRoundRectRgn(0, 0, Width, Height, 12, 12));
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
 
         private void pic_close_Click(object sender, EventArgs e)
         {
@@ -42,10 +47,6 @@ namespace Proj_M1011_BrunoPinheiro
             WindowState = FormWindowState.Minimized;
         }
 
-        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
-        private extern static void ReleaseCapture();
-        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
-        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
         private void pnl_top_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
@@ -64,17 +65,10 @@ namespace Proj_M1011_BrunoPinheiro
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
-        float caro = 0, barato=999;
-        float soma = 0, media;
-        string NomeCaro, NomeBarato;
+        int numtotalstock=0;
+        float valorstock=0;
 
-        private void dgv_produtos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        int countmedia = 0;
-        private void frm_consultar_Load(object sender, EventArgs e)
+        private void frm_consultarstock_Load(object sender, EventArgs e)
         {
             var LerProdutos = System.Xml.Linq.XElement.Load("Produtos.xml");
             int contar = LerProdutos.Descendants().Count(el => el.Name.LocalName == "Artigos");
@@ -82,6 +76,8 @@ namespace Proj_M1011_BrunoPinheiro
             int i = 0;
             string[] nome = new string[contar];
             float[] preco = new float[contar];
+            int[] quantidade = new int[contar];
+            float[] ValorStock = new float[contar];
 
             dgv_produtos.Rows.Clear();
             XmlTextReader ler = new XmlTextReader("Produtos.xml");
@@ -108,49 +104,44 @@ namespace Proj_M1011_BrunoPinheiro
                     {
                         ler.Read();
                         preco[i] = float.Parse(ler.Value);
-                        dgv_produtos.Rows.Add(nome[i], preco[i]);
+                        
                     }
 
                     if (ler.Name == "Quantidade")
                     {
                         ler.Read();
-
+                        quantidade[i] = int.Parse(ler.Value);
+                        ValorStock[i] = preco[i] * quantidade[i];
+                        valorstock = valorstock + ValorStock[i];
+                        numtotalstock = numtotalstock + quantidade[i];
+                        dgv_produtos.Rows.Add(nome[i], quantidade[i], preco[i], ValorStock[i]);
                         i++;
                     }
                 }
             }
             ler.Close();
+        }
 
-            for (i = 0; i < contar; i++)
-            {
-                soma = soma + preco[i];
+        private void btn_stock_Click(object sender, EventArgs e)
+        {
+            lbl_ntas.Visible = true;
+            lbl_vts.Visible = true;
+            lbl_numstock.Text = numtotalstock.ToString();
+            lbl_valorstock.Text = valorstock.ToString();
+        }
 
-                if (preco[i] > caro)
-                {
-                    caro = preco[i];
-                    NomeCaro = nome[i];
-                }
-                if (preco[i] < barato)
-                {
-                    barato = preco[i];
-                    NomeBarato = nome[i];
-                }
-            }
-            media = soma / contar;
+        private void btn_stock_MouseMove(object sender, MouseEventArgs e)
+        {
+            btn_stock.BackColor = Color.Black;
+            btn_stock.ForeColor = Color.White;
+            this.btn_stock.Image = ((System.Drawing.Image)(Properties.Resources.information__1_));
+        }
 
-            for (i = 0; i < contar; i++)
-            {
-                if (preco[i] > media)
-                {
-                    countmedia++;
-                }
-            }
-            lbl_produtobarato.Text = NomeBarato;
-            lbl_produtocaro.Text = NomeCaro;
-            lbl_produtobaratop.Text = barato.ToString() + "€";
-            lbl_produtocarop.Text = caro.ToString() + "€";
-            lbl_median.Text = media.ToString() + "€";
-            lbl_numpsm.Text = countmedia.ToString();
+        private void btn_stock_MouseLeave(object sender, EventArgs e)
+        {
+            btn_stock.BackColor = Color.White;
+            btn_stock.ForeColor = Color.Black;
+            this.btn_stock.Image = ((System.Drawing.Image)(Properties.Resources.information));
         }
     }
 }

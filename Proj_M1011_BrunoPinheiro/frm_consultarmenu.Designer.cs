@@ -33,7 +33,7 @@
             this.lbl_name = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_username = new System.Windows.Forms.Label();
-            this.btn_autor = new System.Windows.Forms.Button();
+            this.btn_stock = new System.Windows.Forms.Button();
             this.btn_artigos = new System.Windows.Forms.Button();
             this.btn_voltar = new System.Windows.Forms.Button();
             this.pic_minimize = new System.Windows.Forms.PictureBox();
@@ -90,20 +90,23 @@
             this.lbl_username.Text = "Consultar";
             this.lbl_username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btn_autor
+            // btn_stock
             // 
-            this.btn_autor.FlatAppearance.BorderSize = 0;
-            this.btn_autor.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_autor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_autor.Font = new System.Drawing.Font("Futura-Heavy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_autor.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.jordan51;
-            this.btn_autor.Location = new System.Drawing.Point(273, 109);
-            this.btn_autor.Name = "btn_autor";
-            this.btn_autor.Size = new System.Drawing.Size(110, 128);
-            this.btn_autor.TabIndex = 15;
-            this.btn_autor.Text = "Stock";
-            this.btn_autor.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_autor.UseVisualStyleBackColor = true;
+            this.btn_stock.FlatAppearance.BorderSize = 0;
+            this.btn_stock.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_stock.Font = new System.Drawing.Font("Futura-Heavy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_stock.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.jordan18;
+            this.btn_stock.Location = new System.Drawing.Point(273, 109);
+            this.btn_stock.Name = "btn_stock";
+            this.btn_stock.Size = new System.Drawing.Size(110, 128);
+            this.btn_stock.TabIndex = 15;
+            this.btn_stock.Text = "Stock";
+            this.btn_stock.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_stock.UseVisualStyleBackColor = true;
+            this.btn_stock.Click += new System.EventHandler(this.btn_stock_Click);
+            this.btn_stock.MouseLeave += new System.EventHandler(this.btn_stock_MouseLeave);
+            this.btn_stock.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_stock_MouseMove);
             // 
             // btn_artigos
             // 
@@ -163,6 +166,7 @@
             this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pic_close.TabIndex = 4;
             this.pic_close.TabStop = false;
+            this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
             // 
             // pic_logo
             // 
@@ -183,7 +187,7 @@
             this.ClientSize = new System.Drawing.Size(548, 331);
             this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_autor);
+            this.Controls.Add(this.btn_stock);
             this.Controls.Add(this.btn_artigos);
             this.Controls.Add(this.btn_voltar);
             this.Controls.Add(this.pnl_top);
@@ -211,7 +215,7 @@
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.PictureBox pic_logo;
         private System.Windows.Forms.Button btn_voltar;
-        private System.Windows.Forms.Button btn_autor;
+        private System.Windows.Forms.Button btn_stock;
         private System.Windows.Forms.Button btn_artigos;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label lbl_username;
