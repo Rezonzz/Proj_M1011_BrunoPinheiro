@@ -64,6 +64,12 @@
     <Compile Include="frm_consultarmenu.Designer.cs">
       <DependentUpon>frm_consultarmenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_consultarpesq.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_consultarpesq.Designer.cs">
+      <DependentUpon>frm_consultarpesq.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_consultarstock.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_consultarmenu.resx">
       <DependentUpon>frm_consultarmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_consultarpesq.resx">
+      <DependentUpon>frm_consultarpesq.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_consultarstock.resx">
       <DependentUpon>frm_consultarstock.cs</DependentUpon>
