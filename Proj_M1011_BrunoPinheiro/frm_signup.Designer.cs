@@ -60,6 +60,10 @@
             this.pic_password = new System.Windows.Forms.PictureBox();
             this.pic_username = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.lbl_username = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
@@ -453,12 +457,60 @@
             this.pictureBox1.TabIndex = 61;
             this.pictureBox1.TabStop = false;
             // 
+            // lbl_username
+            // 
+            this.lbl_username.AutoSize = true;
+            this.lbl_username.Font = new System.Drawing.Font("Futura-Heavy", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_username.Location = new System.Drawing.Point(91, 222);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(75, 19);
+            this.lbl_username.TabIndex = 90;
+            this.lbl_username.Text = "Username";
+            this.lbl_username.Visible = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Futura-Heavy", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(91, 300);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(71, 19);
+            this.label2.TabIndex = 91;
+            this.label2.Text = "Password";
+            this.label2.Visible = false;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Futura-Heavy", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(91, 376);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(141, 19);
+            this.label3.TabIndex = 92;
+            this.label3.Text = "Confirmar Password";
+            this.label3.Visible = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Futura-Heavy", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(91, 467);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(112, 19);
+            this.label4.TabIndex = 93;
+            this.label4.Text = "Passe de Gestor";
+            this.label4.Visible = false;
+            // 
             // frm_signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(337, 576);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.pnl_top);
             this.Controls.Add(this.pic_confirmar);
             this.Controls.Add(this.pic_passe);
@@ -544,5 +596,9 @@
         private System.Windows.Forms.PictureBox pic_close;
         private System.Windows.Forms.PictureBox pic_logo;
         private System.Windows.Forms.PictureBox pic_minimize;
+        private System.Windows.Forms.Label lbl_username;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
     }
 }
