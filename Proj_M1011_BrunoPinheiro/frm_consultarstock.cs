@@ -37,9 +37,18 @@ namespace Proj_M1011_BrunoPinheiro
 
         private void pic_close_Click(object sender, EventArgs e)
         {
-            frm_consultarmenu frm_consultarmenu = new frm_consultarmenu();
-            frm_consultarmenu.Show();
-            this.Close();
+            if (UserInfo.PasseAdm_user == "y")
+            {
+                frm_consultarmenu frm_consultarmenu = new frm_consultarmenu();
+                frm_consultarmenu.Show();
+                this.Close();
+            }
+            else
+            {
+                frm_consultarmenu2 frm_consultarmenu2 = new frm_consultarmenu2();
+                frm_consultarmenu2.Show();
+                this.Close();
+            }
         }
 
         private void pic_minimize_Click(object sender, EventArgs e)
@@ -67,6 +76,29 @@ namespace Proj_M1011_BrunoPinheiro
 
         int numtotalstock=0;
         float valorstock=0;
+
+
+        private void btn_stock_Click(object sender, EventArgs e)
+        {
+            lbl_ntas.Visible = true;
+            lbl_vts.Visible = true;
+            lbl_numstock.Text = numtotalstock.ToString();
+            lbl_valorstock.Text = valorstock.ToString() + "€";
+        }
+
+        private void btn_stock_MouseMove(object sender, MouseEventArgs e)
+        {
+            btn_stock.BackColor = Color.Black;
+            btn_stock.ForeColor = Color.White;
+            this.btn_stock.Image = ((System.Drawing.Image)(Properties.Resources.information__1_));
+        }
+
+        private void btn_stock_MouseLeave(object sender, EventArgs e)
+        {
+            btn_stock.BackColor = Color.White;
+            btn_stock.ForeColor = Color.Black;
+            this.btn_stock.Image = ((System.Drawing.Image)(Properties.Resources.information));
+        }
 
         private void frm_consultarstock_Load(object sender, EventArgs e)
         {
@@ -104,7 +136,7 @@ namespace Proj_M1011_BrunoPinheiro
                     {
                         ler.Read();
                         preco[i] = float.Parse(ler.Value);
-                        
+
                     }
 
                     if (ler.Name == "Quantidade")
@@ -120,28 +152,6 @@ namespace Proj_M1011_BrunoPinheiro
                 }
             }
             ler.Close();
-        }
-
-        private void btn_stock_Click(object sender, EventArgs e)
-        {
-            lbl_ntas.Visible = true;
-            lbl_vts.Visible = true;
-            lbl_numstock.Text = numtotalstock.ToString();
-            lbl_valorstock.Text = valorstock.ToString();
-        }
-
-        private void btn_stock_MouseMove(object sender, MouseEventArgs e)
-        {
-            btn_stock.BackColor = Color.Black;
-            btn_stock.ForeColor = Color.White;
-            this.btn_stock.Image = ((System.Drawing.Image)(Properties.Resources.information__1_));
-        }
-
-        private void btn_stock_MouseLeave(object sender, EventArgs e)
-        {
-            btn_stock.BackColor = Color.White;
-            btn_stock.ForeColor = Color.Black;
-            this.btn_stock.Image = ((System.Drawing.Image)(Properties.Resources.information));
         }
     }
 }

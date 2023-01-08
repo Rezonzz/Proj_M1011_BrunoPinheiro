@@ -207,6 +207,10 @@ namespace Proj_M1011_BrunoPinheiro
             txt_password.UseSystemPasswordChar = true;
             txt_confirmar.Text = "Confirmar Password";
             txt_confirmar.UseSystemPasswordChar = true;
+            txt_passe.ResetText();
+            txt_passe.Clear();
+            txt_passe.Text = "Passe de Gestor";
+            txt_passe.UseSystemPasswordChar = true;
             pic_ocultado.Enabled = false;
             pic_ocultado.Visible = false;
             pic_mostrar.Enabled = true;

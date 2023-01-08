@@ -90,7 +90,7 @@ namespace Proj_M1011_BrunoPinheiro
 
         private void frm_menu2_Load(object sender, EventArgs e)
         {
-            lbl_username.Text = UserInfo.Username_user;
+            lbl_username.Text = UserInfo.Username_user + " - Cliente";
         }
 
         private void btn_logout_MouseLeave(object sender, EventArgs e)
@@ -122,6 +122,13 @@ namespace Proj_M1011_BrunoPinheiro
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btn_stock_Click(object sender, EventArgs e)
+        {
+            frm_consultarmenu2 frm_consultarmenu2 = new frm_consultarmenu2();
+            frm_consultarmenu2.Show();
+            this.Close();
         }
     }
 }

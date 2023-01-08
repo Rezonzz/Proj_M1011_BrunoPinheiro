@@ -138,7 +138,7 @@
             this.btn_sair.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_sair.Font = new System.Drawing.Font("Futura-Heavy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_sair.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.jordan7;
-            this.btn_sair.Location = new System.Drawing.Point(332, 103);
+            this.btn_sair.Location = new System.Drawing.Point(330, 103);
             this.btn_sair.Name = "btn_sair";
             this.btn_sair.Size = new System.Drawing.Size(110, 128);
             this.btn_sair.TabIndex = 14;
@@ -156,7 +156,7 @@
             this.btn_autor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_autor.Font = new System.Drawing.Font("Futura-Heavy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_autor.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.jordan51;
-            this.btn_autor.Location = new System.Drawing.Point(222, 103);
+            this.btn_autor.Location = new System.Drawing.Point(220, 103);
             this.btn_autor.Name = "btn_autor";
             this.btn_autor.Size = new System.Drawing.Size(110, 128);
             this.btn_autor.TabIndex = 13;
@@ -174,13 +174,14 @@
             this.btn_stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_stock.Font = new System.Drawing.Font("Futura-Heavy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_stock.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.jordan3;
-            this.btn_stock.Location = new System.Drawing.Point(112, 103);
+            this.btn_stock.Location = new System.Drawing.Point(110, 103);
             this.btn_stock.Name = "btn_stock";
             this.btn_stock.Size = new System.Drawing.Size(110, 128);
             this.btn_stock.TabIndex = 12;
-            this.btn_stock.Text = "Stock";
+            this.btn_stock.Text = "Consultar";
             this.btn_stock.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_stock.UseVisualStyleBackColor = true;
+            this.btn_stock.Click += new System.EventHandler(this.btn_stock_Click);
             this.btn_stock.MouseLeave += new System.EventHandler(this.btn_stock_MouseLeave);
             this.btn_stock.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_stock_MouseMove);
             // 

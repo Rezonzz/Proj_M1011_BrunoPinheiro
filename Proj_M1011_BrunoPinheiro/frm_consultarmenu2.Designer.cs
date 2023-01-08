@@ -1,6 +1,6 @@
 ﻿namespace Proj_M1011_BrunoPinheiro
 {
-    partial class frm_consultarmenu
+    partial class frm_consultarmenu2
     {
         /// <summary>
         /// Required designer variable.
@@ -28,23 +28,43 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_consultarmenu));
-            this.pnl_top = new System.Windows.Forms.Panel();
-            this.pic_minimize = new System.Windows.Forms.PictureBox();
-            this.pic_close = new System.Windows.Forms.PictureBox();
-            this.lbl_name = new System.Windows.Forms.Label();
-            this.pic_logo = new System.Windows.Forms.PictureBox();
-            this.label1 = new System.Windows.Forms.Label();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_consultarmenu2));
             this.lbl_username = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pnl_top = new System.Windows.Forms.Panel();
+            this.lbl_name = new System.Windows.Forms.Label();
             this.btn_pesquisa = new System.Windows.Forms.Button();
-            this.btn_stock = new System.Windows.Forms.Button();
             this.btn_artigos = new System.Windows.Forms.Button();
             this.btn_voltar = new System.Windows.Forms.Button();
+            this.pic_minimize = new System.Windows.Forms.PictureBox();
+            this.pic_close = new System.Windows.Forms.PictureBox();
+            this.pic_logo = new System.Windows.Forms.PictureBox();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
+            // 
+            // lbl_username
+            // 
+            this.lbl_username.Font = new System.Drawing.Font("Akira Expanded", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_username.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.lbl_username.Location = new System.Drawing.Point(194, 106);
+            this.lbl_username.Name = "lbl_username";
+            this.lbl_username.Size = new System.Drawing.Size(167, 19);
+            this.lbl_username.TabIndex = 24;
+            this.lbl_username.Text = "Consultar";
+            this.lbl_username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Akira Expanded", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(205, 72);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(147, 34);
+            this.label1.TabIndex = 23;
+            this.label1.Text = "MENU";
             // 
             // pnl_top
             // 
@@ -56,8 +76,74 @@
             this.pnl_top.Location = new System.Drawing.Point(0, 0);
             this.pnl_top.Name = "pnl_top";
             this.pnl_top.Size = new System.Drawing.Size(548, 51);
-            this.pnl_top.TabIndex = 12;
+            this.pnl_top.TabIndex = 19;
             this.pnl_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_top_MouseDown);
+            // 
+            // lbl_name
+            // 
+            this.lbl_name.AutoSize = true;
+            this.lbl_name.Font = new System.Drawing.Font("Akira Expanded", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_name.Location = new System.Drawing.Point(48, 15);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(116, 20);
+            this.lbl_name.TabIndex = 7;
+            this.lbl_name.Text = "JORDAN";
+            this.lbl_name.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbl_name_MouseDown);
+            // 
+            // btn_pesquisa
+            // 
+            this.btn_pesquisa.FlatAppearance.BorderSize = 0;
+            this.btn_pesquisa.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_pesquisa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_pesquisa.Font = new System.Drawing.Font("Futura-Heavy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_pesquisa.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.jordan19;
+            this.btn_pesquisa.Location = new System.Drawing.Point(278, 109);
+            this.btn_pesquisa.Name = "btn_pesquisa";
+            this.btn_pesquisa.Size = new System.Drawing.Size(110, 128);
+            this.btn_pesquisa.TabIndex = 25;
+            this.btn_pesquisa.Text = "Pesquisa";
+            this.btn_pesquisa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_pesquisa.UseVisualStyleBackColor = true;
+            this.btn_pesquisa.Click += new System.EventHandler(this.btn_pesquisa_Click);
+            this.btn_pesquisa.MouseLeave += new System.EventHandler(this.btn_pesquisa_MouseLeave);
+            this.btn_pesquisa.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_pesquisa_MouseMove);
+            // 
+            // btn_artigos
+            // 
+            this.btn_artigos.FlatAppearance.BorderSize = 0;
+            this.btn_artigos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_artigos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_artigos.Font = new System.Drawing.Font("Futura-Heavy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_artigos.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.jordan16;
+            this.btn_artigos.Location = new System.Drawing.Point(168, 109);
+            this.btn_artigos.Name = "btn_artigos";
+            this.btn_artigos.Size = new System.Drawing.Size(110, 128);
+            this.btn_artigos.TabIndex = 21;
+            this.btn_artigos.Text = "Artigos";
+            this.btn_artigos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_artigos.UseVisualStyleBackColor = true;
+            this.btn_artigos.Click += new System.EventHandler(this.btn_artigos_Click);
+            this.btn_artigos.MouseLeave += new System.EventHandler(this.btn_artigos_MouseLeave);
+            this.btn_artigos.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_artigos_MouseMove);
+            // 
+            // btn_voltar
+            // 
+            this.btn_voltar.FlatAppearance.BorderSize = 0;
+            this.btn_voltar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_voltar.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_voltar.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.jordan11;
+            this.btn_voltar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_voltar.Location = new System.Drawing.Point(464, 264);
+            this.btn_voltar.Name = "btn_voltar";
+            this.btn_voltar.Size = new System.Drawing.Size(84, 67);
+            this.btn_voltar.TabIndex = 20;
+            this.btn_voltar.Text = "Voltar";
+            this.btn_voltar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_voltar.UseVisualStyleBackColor = true;
+            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
+            this.btn_voltar.MouseLeave += new System.EventHandler(this.btn_voltar_MouseLeave);
+            this.btn_voltar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_voltar_MouseMove);
             // 
             // pic_minimize
             // 
@@ -83,17 +169,6 @@
             this.pic_close.TabStop = false;
             this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
             // 
-            // lbl_name
-            // 
-            this.lbl_name.AutoSize = true;
-            this.lbl_name.Font = new System.Drawing.Font("Akira Expanded", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_name.Location = new System.Drawing.Point(48, 15);
-            this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(116, 20);
-            this.lbl_name.TabIndex = 7;
-            this.lbl_name.Text = "JORDAN";
-            this.lbl_name.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbl_name_MouseDown);
-            // 
             // pic_logo
             // 
             this.pic_logo.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources._584292c4a6515b1e0ad75aca1;
@@ -105,101 +180,7 @@
             this.pic_logo.TabStop = false;
             this.pic_logo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pic_logo_MouseDown);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Akira Expanded", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(205, 72);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(147, 34);
-            this.label1.TabIndex = 16;
-            this.label1.Text = "MENU";
-            // 
-            // lbl_username
-            // 
-            this.lbl_username.Font = new System.Drawing.Font("Akira Expanded", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_username.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.lbl_username.Location = new System.Drawing.Point(194, 106);
-            this.lbl_username.Name = "lbl_username";
-            this.lbl_username.Size = new System.Drawing.Size(167, 19);
-            this.lbl_username.TabIndex = 17;
-            this.lbl_username.Text = "Consultar";
-            this.lbl_username.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // btn_pesquisa
-            // 
-            this.btn_pesquisa.FlatAppearance.BorderSize = 0;
-            this.btn_pesquisa.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_pesquisa.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_pesquisa.Font = new System.Drawing.Font("Futura-Heavy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_pesquisa.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.jordan19;
-            this.btn_pesquisa.Location = new System.Drawing.Point(333, 109);
-            this.btn_pesquisa.Name = "btn_pesquisa";
-            this.btn_pesquisa.Size = new System.Drawing.Size(110, 128);
-            this.btn_pesquisa.TabIndex = 18;
-            this.btn_pesquisa.Text = "Pesquisa";
-            this.btn_pesquisa.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_pesquisa.UseVisualStyleBackColor = true;
-            this.btn_pesquisa.Click += new System.EventHandler(this.btn_pesquisa_Click);
-            this.btn_pesquisa.MouseLeave += new System.EventHandler(this.btn_pesquisa_MouseLeave);
-            this.btn_pesquisa.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_pesquisa_MouseMove);
-            // 
-            // btn_stock
-            // 
-            this.btn_stock.FlatAppearance.BorderSize = 0;
-            this.btn_stock.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_stock.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_stock.Font = new System.Drawing.Font("Futura-Heavy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_stock.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.jordan18;
-            this.btn_stock.Location = new System.Drawing.Point(223, 109);
-            this.btn_stock.Name = "btn_stock";
-            this.btn_stock.Size = new System.Drawing.Size(110, 128);
-            this.btn_stock.TabIndex = 15;
-            this.btn_stock.Text = "Stock";
-            this.btn_stock.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_stock.UseVisualStyleBackColor = true;
-            this.btn_stock.Click += new System.EventHandler(this.btn_stock_Click);
-            this.btn_stock.MouseLeave += new System.EventHandler(this.btn_stock_MouseLeave);
-            this.btn_stock.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_stock_MouseMove);
-            // 
-            // btn_artigos
-            // 
-            this.btn_artigos.FlatAppearance.BorderSize = 0;
-            this.btn_artigos.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_artigos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_artigos.Font = new System.Drawing.Font("Futura-Heavy", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_artigos.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.jordan16;
-            this.btn_artigos.Location = new System.Drawing.Point(113, 109);
-            this.btn_artigos.Name = "btn_artigos";
-            this.btn_artigos.Size = new System.Drawing.Size(110, 128);
-            this.btn_artigos.TabIndex = 14;
-            this.btn_artigos.Text = "Artigos";
-            this.btn_artigos.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_artigos.UseVisualStyleBackColor = true;
-            this.btn_artigos.Click += new System.EventHandler(this.btn_artigos_Click);
-            this.btn_artigos.MouseLeave += new System.EventHandler(this.btn_artigos_MouseLeave);
-            this.btn_artigos.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_artigos_MouseMove);
-            // 
-            // btn_voltar
-            // 
-            this.btn_voltar.FlatAppearance.BorderSize = 0;
-            this.btn_voltar.FlatAppearance.MouseOverBackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.btn_voltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_voltar.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_voltar.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.jordan11;
-            this.btn_voltar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_voltar.Location = new System.Drawing.Point(464, 264);
-            this.btn_voltar.Name = "btn_voltar";
-            this.btn_voltar.Size = new System.Drawing.Size(84, 67);
-            this.btn_voltar.TabIndex = 13;
-            this.btn_voltar.Text = "Voltar";
-            this.btn_voltar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.btn_voltar.UseVisualStyleBackColor = true;
-            this.btn_voltar.Click += new System.EventHandler(this.btn_voltar_Click);
-            this.btn_voltar.MouseLeave += new System.EventHandler(this.btn_voltar_MouseLeave);
-            this.btn_voltar.MouseMove += new System.Windows.Forms.MouseEventHandler(this.btn_voltar_MouseMove);
-            // 
-            // frm_consultarmenu
+            // frm_consultarmenu2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -208,14 +189,13 @@
             this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.btn_pesquisa);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.btn_stock);
             this.Controls.Add(this.btn_artigos);
             this.Controls.Add(this.btn_voltar);
             this.Controls.Add(this.pnl_top);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "frm_consultarmenu";
+            this.Name = "frm_consultarmenu2";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jordan - Consultar Menu";
             this.pnl_top.ResumeLayout(false);
@@ -230,16 +210,15 @@
 
         #endregion
 
+        private System.Windows.Forms.Label lbl_username;
+        private System.Windows.Forms.Button btn_pesquisa;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btn_artigos;
+        private System.Windows.Forms.Button btn_voltar;
         private System.Windows.Forms.Panel pnl_top;
         private System.Windows.Forms.PictureBox pic_minimize;
         private System.Windows.Forms.PictureBox pic_close;
         private System.Windows.Forms.Label lbl_name;
         private System.Windows.Forms.PictureBox pic_logo;
-        private System.Windows.Forms.Button btn_voltar;
-        private System.Windows.Forms.Button btn_stock;
-        private System.Windows.Forms.Button btn_artigos;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label lbl_username;
-        private System.Windows.Forms.Button btn_pesquisa;
     }
 }

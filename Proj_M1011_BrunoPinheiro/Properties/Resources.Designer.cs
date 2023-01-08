@@ -463,9 +463,29 @@ namespace Proj_M1011_BrunoPinheiro.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap jordan19 {
+            get {
+                object obj = ResourceManager.GetObject("jordan19", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap jordan2 {
             get {
                 object obj = ResourceManager.GetObject("jordan2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap jordan20 {
+            get {
+                object obj = ResourceManager.GetObject("jordan20", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -719,6 +739,16 @@ namespace Proj_M1011_BrunoPinheiro.Properties {
         internal static System.Drawing.Bitmap search__4_ {
             get {
                 object obj = ResourceManager.GetObject("search (4)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap search__5_ {
+            get {
+                object obj = ResourceManager.GetObject("search (5)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

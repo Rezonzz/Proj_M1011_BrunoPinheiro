@@ -32,9 +32,18 @@ namespace Proj_M1011_BrunoPinheiro
 
         private void pic_close_Click(object sender, EventArgs e)
         {
-            frm_consultarmenu frm_consultarmenu = new frm_consultarmenu();
-            frm_consultarmenu.Show();
-            this.Close();
+            if (UserInfo.PasseAdm_user == "y")
+            {
+                frm_consultarmenu frm_consultarmenu = new frm_consultarmenu();
+                frm_consultarmenu.Show();
+                this.Close();
+            }
+            else
+            {
+                frm_consultarmenu2 frm_consultarmenu2 = new frm_consultarmenu2();
+                frm_consultarmenu2.Show();
+                this.Close();
+            }
         }
 
         private void pic_minimize_Click(object sender, EventArgs e)

@@ -64,6 +64,12 @@
     <Compile Include="frm_consultarmenu.Designer.cs">
       <DependentUpon>frm_consultarmenu.cs</DependentUpon>
     </Compile>
+    <Compile Include="frm_consultarmenu2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frm_consultarmenu2.Designer.cs">
+      <DependentUpon>frm_consultarmenu2.cs</DependentUpon>
+    </Compile>
     <Compile Include="frm_consultarpesq.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -132,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frm_consultarmenu.resx">
       <DependentUpon>frm_consultarmenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frm_consultarmenu2.resx">
+      <DependentUpon>frm_consultarmenu2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frm_consultarpesq.resx">
       <DependentUpon>frm_consultarpesq.cs</DependentUpon>
@@ -320,6 +329,9 @@
     <None Include="Resources\information %281%29.png" />
     <None Include="Resources\search %283%29.png" />
     <None Include="Resources\search %284%29.png" />
+    <None Include="Resources\jordan19.png" />
+    <None Include="Resources\jordan20.png" />
+    <None Include="Resources\search %285%29.png" />
     <Content Include="users.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
