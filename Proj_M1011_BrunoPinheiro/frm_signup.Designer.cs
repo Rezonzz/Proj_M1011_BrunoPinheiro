@@ -40,7 +40,6 @@
             this.pnl_1 = new System.Windows.Forms.Panel();
             this.txt_confirmar = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lbl_vazio = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.rad_sim = new System.Windows.Forms.RadioButton();
             this.rad_nao = new System.Windows.Forms.RadioButton();
@@ -61,9 +60,9 @@
             this.pic_username = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lbl_username = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lbl_password = new System.Windows.Forms.Label();
+            this.lbl_confirmar = new System.Windows.Forms.Label();
+            this.lbl_passe = new System.Windows.Forms.Label();
             this.pnl_top.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
@@ -87,8 +86,6 @@
             this.lbl_invalido.Name = "lbl_invalido";
             this.lbl_invalido.Size = new System.Drawing.Size(236, 32);
             this.lbl_invalido.TabIndex = 73;
-            this.lbl_invalido.Text = "Username ou Password Inválidos";
-            this.lbl_invalido.Visible = false;
             // 
             // txt_password
             // 
@@ -221,16 +218,6 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(236, 1);
             this.panel1.TabIndex = 78;
-            // 
-            // lbl_vazio
-            // 
-            this.lbl_vazio.ForeColor = System.Drawing.Color.Red;
-            this.lbl_vazio.Location = new System.Drawing.Point(49, 467);
-            this.lbl_vazio.Name = "lbl_vazio";
-            this.lbl_vazio.Size = new System.Drawing.Size(260, 19);
-            this.lbl_vazio.TabIndex = 82;
-            this.lbl_vazio.Text = "As caixas do Username ou/e Password estão vazios";
-            this.lbl_vazio.Visible = false;
             // 
             // label1
             // 
@@ -468,38 +455,38 @@
             this.lbl_username.Text = "Username";
             this.lbl_username.Visible = false;
             // 
-            // label2
+            // lbl_password
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Futura-Heavy", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(91, 300);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(71, 19);
-            this.label2.TabIndex = 91;
-            this.label2.Text = "Password";
-            this.label2.Visible = false;
+            this.lbl_password.AutoSize = true;
+            this.lbl_password.Font = new System.Drawing.Font("Futura-Heavy", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_password.Location = new System.Drawing.Point(91, 300);
+            this.lbl_password.Name = "lbl_password";
+            this.lbl_password.Size = new System.Drawing.Size(71, 19);
+            this.lbl_password.TabIndex = 91;
+            this.lbl_password.Text = "Password";
+            this.lbl_password.Visible = false;
             // 
-            // label3
+            // lbl_confirmar
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Futura-Heavy", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(91, 376);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(141, 19);
-            this.label3.TabIndex = 92;
-            this.label3.Text = "Confirmar Password";
-            this.label3.Visible = false;
+            this.lbl_confirmar.AutoSize = true;
+            this.lbl_confirmar.Font = new System.Drawing.Font("Futura-Heavy", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_confirmar.Location = new System.Drawing.Point(91, 376);
+            this.lbl_confirmar.Name = "lbl_confirmar";
+            this.lbl_confirmar.Size = new System.Drawing.Size(141, 19);
+            this.lbl_confirmar.TabIndex = 92;
+            this.lbl_confirmar.Text = "Confirmar Password";
+            this.lbl_confirmar.Visible = false;
             // 
-            // label4
+            // lbl_passe
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Futura-Heavy", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(91, 467);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(112, 19);
-            this.label4.TabIndex = 93;
-            this.label4.Text = "Passe de Gestor";
-            this.label4.Visible = false;
+            this.lbl_passe.AutoSize = true;
+            this.lbl_passe.Font = new System.Drawing.Font("Futura-Heavy", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_passe.Location = new System.Drawing.Point(91, 467);
+            this.lbl_passe.Name = "lbl_passe";
+            this.lbl_passe.Size = new System.Drawing.Size(112, 19);
+            this.lbl_passe.TabIndex = 93;
+            this.lbl_passe.Text = "Passe de Gestor";
+            this.lbl_passe.Visible = false;
             // 
             // frm_signup
             // 
@@ -507,9 +494,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(337, 576);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
+            this.Controls.Add(this.lbl_passe);
+            this.Controls.Add(this.lbl_confirmar);
+            this.Controls.Add(this.lbl_password);
             this.Controls.Add(this.lbl_username);
             this.Controls.Add(this.pnl_top);
             this.Controls.Add(this.pic_confirmar);
@@ -519,7 +506,6 @@
             this.Controls.Add(this.rad_nao);
             this.Controls.Add(this.rad_sim);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lbl_vazio);
             this.Controls.Add(this.pic_mostrar2);
             this.Controls.Add(this.pic_ocultado2);
             this.Controls.Add(this.txt_confirmar);
@@ -584,7 +570,6 @@
         private System.Windows.Forms.TextBox txt_confirmar;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.PictureBox pic_confirmar;
-        private System.Windows.Forms.Label lbl_vazio;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RadioButton rad_sim;
         private System.Windows.Forms.RadioButton rad_nao;
@@ -597,8 +582,8 @@
         private System.Windows.Forms.PictureBox pic_logo;
         private System.Windows.Forms.PictureBox pic_minimize;
         private System.Windows.Forms.Label lbl_username;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lbl_password;
+        private System.Windows.Forms.Label lbl_confirmar;
+        private System.Windows.Forms.Label lbl_passe;
     }
 }

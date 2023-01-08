@@ -37,7 +37,6 @@ namespace Proj_M1011_BrunoPinheiro
             btn_signup.Location = new Point(92, 556);
             lbl_limpar.Location = new Point(238, 563);
             lbl_sair.Location = new Point(139, 596);
-            lbl_vazio.Location = new Point(49, 529);
             lbl_invalido.Location = new Point(49, 529);
             pic_passe.Visible = true;
             txt_passe.Visible = true;
@@ -57,7 +56,6 @@ namespace Proj_M1011_BrunoPinheiro
             btn_signup.Location = new Point(92, 504);
             lbl_limpar.Location = new Point(238, 511);
             lbl_sair.Location = new Point(139, 544);
-            lbl_vazio.Location = new Point(49, 467);
             lbl_invalido.Location = new Point(49, 467);
             pic_passe.Visible = false;
             txt_passe.Visible = false;
@@ -87,36 +85,54 @@ namespace Proj_M1011_BrunoPinheiro
         {
             if (txt_username.Text == "")
             {
-                MessageBox.Show("Username vazio");
-                Limpar();
+                lbl_invalido.Text = "Username Vazio!";
+                    lbl_username.Visible = true;
+                    txt_username.Focus();
+                    txt_username.ResetText();
+                    this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__2_));
             }
             else
             {
                 if (txt_password.Text == "")
                 {
-                    MessageBox.Show("Password vazia");
-                    Limpar();
+                    lbl_invalido.Text = "Password Vazia!";
+                    lbl_password.Visible = true;
+                    txt_password.Focus();
+                    txt_password.ResetText();
+                    this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__2_));
                 }
                 else
                 {
                     if (txt_confirmar.Text == "")
                     {
-                        MessageBox.Show("Confirmar Password vazio");
-                        Limpar();
+                        lbl_invalido.Text = "Confirmar Password Vazio!";
+                        lbl_confirmar.Visible = true;
+                        txt_confirmar.Focus();
+                        txt_confirmar.ResetText();
+                        this.pic_confirmar.Image = ((System.Drawing.Image)(Properties.Resources.padlock__2_));
                     }
                     else
                     {
                         if (txt_confirmar.Text != txt_password.Text)
                         {
-                            MessageBox.Show("Password nao iguais");
-                            Limpar();
+                            lbl_invalido.Text = "Passwords não são iguais!";
+                            lbl_password.Visible = true;
+                            txt_password.Focus();
+                            txt_password.ResetText();
+                            txt_confirmar.ResetText();
+                            txt_confirmar.Text = "Confirmar Password";
+                            this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__2_));
+                            this.pic_confirmar.Image = ((System.Drawing.Image)(Properties.Resources.padlock__2_));
                         }
                         else
                         {
                             if (rad_sim.Checked == true && txt_passe.Text != "a8ut54hwf2son")
                             {
-                                MessageBox.Show("Passe Errado ou Vazio");
-                                Limpar();
+                                lbl_invalido.Text = "Passe Vazio ou Inválido!";
+                                lbl_passe.Visible = true;
+                                txt_passe.Focus();
+                                txt_passe.ResetText();
+                                this.pic_passe.Image = ((System.Drawing.Image)(Properties.Resources.id_card__1_));
                             }
                             else
                             {
@@ -221,6 +237,10 @@ namespace Proj_M1011_BrunoPinheiro
             pic_mostrar2.Visible = true;
             lbl_limpar.Visible = false;
             lbl_limpar.Enabled = false;
+            lbl_username.Visible = true;
+            lbl_password.Visible = false;
+            lbl_confirmar.Visible = false;
+            lbl_passe.Visible = false;
         }
 
         private void pic_mostrar_Click(object sender, EventArgs e)
@@ -281,6 +301,28 @@ namespace Proj_M1011_BrunoPinheiro
             {
                 txt_username.ResetText();
                 txt_username.Focus();
+                lbl_username.Visible = true;
+            }
+
+            if (txt_password.Text == "")
+            {
+                txt_password.Text = "Password";
+                txt_password.UseSystemPasswordChar = true;
+                lbl_password.Visible = false;
+            }
+
+            if (txt_confirmar.Text == "")
+            {
+                txt_confirmar.Text = "Confirmar Password";
+                txt_confirmar.UseSystemPasswordChar = true;
+                lbl_confirmar.Visible = false;
+            }
+
+            if (txt_passe.Text == "")
+            {
+                txt_passe.Text = "Passe de Gestor";
+                txt_passe.UseSystemPasswordChar = true;
+                lbl_passe.Visible = false;
             }
         }
 
@@ -295,6 +337,26 @@ namespace Proj_M1011_BrunoPinheiro
                 txt_password.UseSystemPasswordChar = false;
                 txt_password.ResetText();
                 txt_password.Focus();
+                lbl_password.Visible = true;
+            }
+            if (txt_username.Text == "")
+            {
+                txt_username.Text = "Username";
+                lbl_username.Visible = false;
+            }
+
+            if (txt_confirmar.Text == "")
+            {
+                txt_confirmar.Text = "Confirmar Password";
+                txt_confirmar.UseSystemPasswordChar = true;
+                lbl_confirmar.Visible = false;
+            }
+
+            if (txt_passe.Text == "")
+            {
+                txt_passe.Text = "Passe de Gestor";
+                txt_passe.UseSystemPasswordChar = true;
+                lbl_passe.Visible = false;
             }
         }
 
@@ -309,6 +371,27 @@ namespace Proj_M1011_BrunoPinheiro
                 txt_confirmar.UseSystemPasswordChar = false;
                 txt_confirmar.ResetText();
                 txt_confirmar.Focus();
+                lbl_confirmar.Visible = true;
+            }
+
+            if (txt_username.Text == "")
+            {
+                txt_username.Text = "Username";
+                lbl_username.Visible = false;
+            }
+
+            if (txt_password.Text == "")
+            {
+                txt_password.Text = "Password";
+                txt_password.UseSystemPasswordChar = true;
+                lbl_password.Visible = false;
+            }
+
+            if (txt_passe.Text == "")
+            {
+                txt_passe.Text = "Passe de Gestor";
+                txt_passe.UseSystemPasswordChar = true;
+                lbl_passe.Visible = false;
             }
         }
 
@@ -323,6 +406,27 @@ namespace Proj_M1011_BrunoPinheiro
                 txt_passe.UseSystemPasswordChar = false;
                 txt_passe.ResetText();
                 txt_passe.Focus();
+                lbl_passe.Visible = true;
+            }
+
+            if (txt_username.Text == "")
+            {
+                txt_username.Text = "Username";
+                lbl_username.Visible = false;
+            }
+
+            if (txt_password.Text == "")
+            {
+                txt_password.Text = "Password";
+                txt_password.UseSystemPasswordChar = true;
+                lbl_password.Visible = false;
+            }
+
+            if (txt_confirmar.Text == "")
+            {
+                txt_confirmar.Text = "Confirmar Password";
+                txt_confirmar.UseSystemPasswordChar = true;
+                lbl_confirmar.Visible = false;
             }
         }
 
@@ -335,6 +439,12 @@ namespace Proj_M1011_BrunoPinheiro
                     txt_password.UseSystemPasswordChar = false;
                     txt_password.ResetText();
                     txt_password.Focus();
+                    lbl_password.Visible = true;
+                    if (txt_username.Text == "")
+                    {
+                        txt_username.Text = "Username";
+                        lbl_username.Visible = false;
+                    }
                     this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
                     this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__2_));
                     this.pic_confirmar.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
@@ -353,6 +463,12 @@ namespace Proj_M1011_BrunoPinheiro
                     txt_confirmar.UseSystemPasswordChar = false;
                     txt_confirmar.ResetText();
                     txt_confirmar.Focus();
+                    lbl_confirmar.Visible = true;
+                    if (txt_password.Text == "")
+                    {
+                        txt_password.Text = "Password";
+                        lbl_password.Visible = false;
+                    }
                     this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
                     this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
                     this.pic_confirmar.Image = ((System.Drawing.Image)(Properties.Resources.padlock__2_));
@@ -366,7 +482,22 @@ namespace Proj_M1011_BrunoPinheiro
         {
             if (e.KeyCode == Keys.Enter)
             {
-                btn_signup.PerformClick();
+                if (rad_sim.Checked == true)
+                {
+                    txt_passe.UseSystemPasswordChar = false;
+                    txt_passe.ResetText();
+                    txt_passe.Focus();
+                    lbl_passe.Visible = true;
+                    if (txt_confirmar.Text == "")
+                    {
+                        txt_confirmar.Text = "Confirmar Password";
+                        lbl_confirmar.Visible = false;
+                    }
+                }
+                else
+                {
+                    btn_signup.PerformClick();
+                }
                 e.SuppressKeyPress = true;
                 this.pic_username.Image = ((System.Drawing.Image)(Properties.Resources.account__1_));
                 this.pic_password.Image = ((System.Drawing.Image)(Properties.Resources.padlock__1_));
@@ -382,6 +513,7 @@ namespace Proj_M1011_BrunoPinheiro
             {
                 lbl_limpar.Visible = true;
                 lbl_limpar.Enabled = true;
+                lbl_username.Visible = true;
             }
         }
 
@@ -392,6 +524,7 @@ namespace Proj_M1011_BrunoPinheiro
             {
                 lbl_limpar.Visible = true;
                 lbl_limpar.Enabled = true;
+                lbl_password.Visible = true;
             }
         }
 
@@ -402,6 +535,7 @@ namespace Proj_M1011_BrunoPinheiro
             {
                 lbl_limpar.Visible = true;
                 lbl_limpar.Enabled = true;
+                lbl_confirmar.Visible = true;
             }
         }
 
@@ -412,6 +546,7 @@ namespace Proj_M1011_BrunoPinheiro
             {
                 lbl_limpar.Visible = true;
                 lbl_limpar.Enabled = true;
+                lbl_passe.Visible = true;
             }
         }
 
