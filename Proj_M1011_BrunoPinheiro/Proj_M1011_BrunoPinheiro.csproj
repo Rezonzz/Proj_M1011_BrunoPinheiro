@@ -318,6 +318,8 @@
     <None Include="Resources\jordan18.png" />
     <None Include="Resources\information.png" />
     <None Include="Resources\information %281%29.png" />
+    <None Include="Resources\search %283%29.png" />
+    <None Include="Resources\search %284%29.png" />
     <Content Include="users.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

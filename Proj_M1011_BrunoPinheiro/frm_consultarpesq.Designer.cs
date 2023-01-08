@@ -31,9 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frm_consultarpesq));
             this.pnl_top = new System.Windows.Forms.Panel();
             this.lbl_name = new System.Windows.Forms.Label();
-            this.pic_close = new System.Windows.Forms.PictureBox();
-            this.pic_minimize = new System.Windows.Forms.PictureBox();
-            this.pic_logo = new System.Windows.Forms.PictureBox();
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.lbl_ntas = new System.Windows.Forms.Label();
             this.dgv_produtos = new System.Windows.Forms.DataGridView();
@@ -45,13 +42,21 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tb_precomin = new System.Windows.Forms.TrackBar();
             this.tb_precomax = new System.Windows.Forms.TrackBar();
+            this.lbl_nummin = new System.Windows.Forms.Label();
+            this.lbl_nummax = new System.Windows.Forms.Label();
+            this.btn_procurar = new System.Windows.Forms.Button();
+            this.pic_close = new System.Windows.Forms.PictureBox();
+            this.pic_minimize = new System.Windows.Forms.PictureBox();
+            this.pic_logo = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.cbo_tamanho = new System.Windows.Forms.ComboBox();
             this.pnl_top.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_produtos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_precomin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_precomax)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_close)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).BeginInit();
             this.SuspendLayout();
             // 
             // pnl_top
@@ -76,38 +81,6 @@
             this.lbl_name.TabIndex = 11;
             this.lbl_name.Text = "JORDAN";
             // 
-            // pic_close
-            // 
-            this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_close.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.close;
-            this.pic_close.Location = new System.Drawing.Point(636, 14);
-            this.pic_close.Name = "pic_close";
-            this.pic_close.Size = new System.Drawing.Size(20, 20);
-            this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_close.TabIndex = 9;
-            this.pic_close.TabStop = false;
-            // 
-            // pic_minimize
-            // 
-            this.pic_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.pic_minimize.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.minus_sign;
-            this.pic_minimize.Location = new System.Drawing.Point(600, 14);
-            this.pic_minimize.Name = "pic_minimize";
-            this.pic_minimize.Size = new System.Drawing.Size(20, 20);
-            this.pic_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_minimize.TabIndex = 10;
-            this.pic_minimize.TabStop = false;
-            // 
-            // pic_logo
-            // 
-            this.pic_logo.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources._584292c4a6515b1e0ad75aca1;
-            this.pic_logo.Location = new System.Drawing.Point(10, 8);
-            this.pic_logo.Name = "pic_logo";
-            this.pic_logo.Size = new System.Drawing.Size(32, 32);
-            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pic_logo.TabIndex = 12;
-            this.pic_logo.TabStop = false;
-            // 
             // txt_nome
             // 
             this.txt_nome.Font = new System.Drawing.Font("Futura-Heavy", 9.749998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -126,7 +99,6 @@
             this.lbl_ntas.TabIndex = 39;
             this.lbl_ntas.Text = "Nome";
             this.lbl_ntas.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.lbl_ntas.Visible = false;
             // 
             // dgv_produtos
             // 
@@ -189,9 +161,9 @@
             // label1
             // 
             this.label1.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(267, 313);
+            this.label1.Location = new System.Drawing.Point(271, 313);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(234, 24);
+            this.label1.Size = new System.Drawing.Size(249, 24);
             this.label1.TabIndex = 42;
             this.label1.Text = "Preço";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -200,20 +172,117 @@
             // tb_precomin
             // 
             this.tb_precomin.AutoSize = false;
-            this.tb_precomin.Location = new System.Drawing.Point(315, 348);
+            this.tb_precomin.Location = new System.Drawing.Point(271, 348);
             this.tb_precomin.Maximum = 1000;
             this.tb_precomin.Name = "tb_precomin";
-            this.tb_precomin.Size = new System.Drawing.Size(140, 35);
+            this.tb_precomin.Size = new System.Drawing.Size(184, 35);
             this.tb_precomin.TabIndex = 43;
+            this.tb_precomin.Scroll += new System.EventHandler(this.tb_precomin_Scroll);
             // 
             // tb_precomax
             // 
             this.tb_precomax.AutoSize = false;
-            this.tb_precomax.Location = new System.Drawing.Point(315, 393);
+            this.tb_precomax.Location = new System.Drawing.Point(271, 393);
             this.tb_precomax.Maximum = 1000;
             this.tb_precomax.Name = "tb_precomax";
-            this.tb_precomax.Size = new System.Drawing.Size(140, 35);
+            this.tb_precomax.Size = new System.Drawing.Size(184, 35);
             this.tb_precomax.TabIndex = 44;
+            this.tb_precomax.Value = 1000;
+            this.tb_precomax.Scroll += new System.EventHandler(this.tb_precomax_Scroll);
+            // 
+            // lbl_nummin
+            // 
+            this.lbl_nummin.Font = new System.Drawing.Font("Futura-Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nummin.Location = new System.Drawing.Point(466, 354);
+            this.lbl_nummin.Name = "lbl_nummin";
+            this.lbl_nummin.Size = new System.Drawing.Size(54, 23);
+            this.lbl_nummin.TabIndex = 45;
+            this.lbl_nummin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // lbl_nummax
+            // 
+            this.lbl_nummax.Font = new System.Drawing.Font("Futura-Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nummax.Location = new System.Drawing.Point(466, 399);
+            this.lbl_nummax.Name = "lbl_nummax";
+            this.lbl_nummax.Size = new System.Drawing.Size(54, 23);
+            this.lbl_nummax.TabIndex = 46;
+            this.lbl_nummax.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // btn_procurar
+            // 
+            this.btn_procurar.FlatAppearance.BorderSize = 0;
+            this.btn_procurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_procurar.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_procurar.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.search__4_;
+            this.btn_procurar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.btn_procurar.Location = new System.Drawing.Point(549, 358);
+            this.btn_procurar.Name = "btn_procurar";
+            this.btn_procurar.Size = new System.Drawing.Size(94, 62);
+            this.btn_procurar.TabIndex = 47;
+            this.btn_procurar.Text = "Procurar";
+            this.btn_procurar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btn_procurar.UseVisualStyleBackColor = true;
+            this.btn_procurar.Click += new System.EventHandler(this.btn_procurar_Click);
+            // 
+            // pic_close
+            // 
+            this.pic_close.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_close.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.close;
+            this.pic_close.Location = new System.Drawing.Point(636, 14);
+            this.pic_close.Name = "pic_close";
+            this.pic_close.Size = new System.Drawing.Size(20, 20);
+            this.pic_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_close.TabIndex = 9;
+            this.pic_close.TabStop = false;
+            // 
+            // pic_minimize
+            // 
+            this.pic_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pic_minimize.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.minus_sign;
+            this.pic_minimize.Location = new System.Drawing.Point(600, 14);
+            this.pic_minimize.Name = "pic_minimize";
+            this.pic_minimize.Size = new System.Drawing.Size(20, 20);
+            this.pic_minimize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_minimize.TabIndex = 10;
+            this.pic_minimize.TabStop = false;
+            // 
+            // pic_logo
+            // 
+            this.pic_logo.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources._584292c4a6515b1e0ad75aca1;
+            this.pic_logo.Location = new System.Drawing.Point(10, 8);
+            this.pic_logo.Name = "pic_logo";
+            this.pic_logo.Size = new System.Drawing.Size(32, 32);
+            this.pic_logo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pic_logo.TabIndex = 12;
+            this.pic_logo.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(6, 378);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(234, 24);
+            this.label2.TabIndex = 48;
+            this.label2.Text = "Tamanho";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // cbo_tamanho
+            // 
+            this.cbo_tamanho.Font = new System.Drawing.Font("Futura-Heavy", 9.749998F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbo_tamanho.FormattingEnabled = true;
+            this.cbo_tamanho.Items.AddRange(new object[] {
+            "Selecione um Tamanho:",
+            "38",
+            "39",
+            "40",
+            "41",
+            "42",
+            "43",
+            "44"});
+            this.cbo_tamanho.Location = new System.Drawing.Point(6, 407);
+            this.cbo_tamanho.Name = "cbo_tamanho";
+            this.cbo_tamanho.Size = new System.Drawing.Size(234, 24);
+            this.cbo_tamanho.TabIndex = 49;
             // 
             // frm_consultarpesq
             // 
@@ -221,6 +290,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(668, 438);
+            this.Controls.Add(this.cbo_tamanho);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.btn_procurar);
+            this.Controls.Add(this.lbl_nummax);
+            this.Controls.Add(this.lbl_nummin);
             this.Controls.Add(this.tb_precomax);
             this.Controls.Add(this.tb_precomin);
             this.Controls.Add(this.label1);
@@ -237,12 +311,12 @@
             this.Load += new System.EventHandler(this.frm_consultarpesq_Load);
             this.pnl_top.ResumeLayout(false);
             this.pnl_top.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_produtos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_precomin)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tb_precomax)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_close)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_minimize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_logo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,5 +340,10 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TrackBar tb_precomin;
         private System.Windows.Forms.TrackBar tb_precomax;
+        private System.Windows.Forms.Label lbl_nummin;
+        private System.Windows.Forms.Label lbl_nummax;
+        private System.Windows.Forms.Button btn_procurar;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox cbo_tamanho;
     }
 }
