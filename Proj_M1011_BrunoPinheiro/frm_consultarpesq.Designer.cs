@@ -241,14 +241,14 @@
             // 
             this.btn_procurar.FlatAppearance.BorderSize = 0;
             this.btn_procurar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_procurar.Font = new System.Drawing.Font("Futura-Heavy", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_procurar.Font = new System.Drawing.Font("Futura-Heavy", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_procurar.Image = global::Proj_M1011_BrunoPinheiro.Properties.Resources.search__4_;
             this.btn_procurar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.btn_procurar.Location = new System.Drawing.Point(549, 358);
+            this.btn_procurar.Location = new System.Drawing.Point(533, 358);
             this.btn_procurar.Name = "btn_procurar";
-            this.btn_procurar.Size = new System.Drawing.Size(94, 62);
+            this.btn_procurar.Size = new System.Drawing.Size(134, 61);
             this.btn_procurar.TabIndex = 47;
-            this.btn_procurar.Text = "Procurar";
+            this.btn_procurar.Text = "Procurar - Preço";
             this.btn_procurar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btn_procurar.UseVisualStyleBackColor = true;
             this.btn_procurar.Click += new System.EventHandler(this.btn_procurar_Click);
