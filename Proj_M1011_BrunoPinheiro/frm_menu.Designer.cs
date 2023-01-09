@@ -32,9 +32,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.lbl_username = new System.Windows.Forms.Label();
             this.pnl_top = new System.Windows.Forms.Panel();
-            this.lbl_name = new System.Windows.Forms.Label();
             this.pic_minimize = new System.Windows.Forms.PictureBox();
             this.pic_close = new System.Windows.Forms.PictureBox();
+            this.lbl_name = new System.Windows.Forms.Label();
             this.pic_logo = new System.Windows.Forms.PictureBox();
             this.btn_logout = new System.Windows.Forms.Button();
             this.btn_sair = new System.Windows.Forms.Button();
@@ -80,17 +80,6 @@
             this.pnl_top.TabIndex = 11;
             this.pnl_top.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_top_MouseDown);
             // 
-            // lbl_name
-            // 
-            this.lbl_name.AutoSize = true;
-            this.lbl_name.Font = new System.Drawing.Font("Akira Expanded", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_name.Location = new System.Drawing.Point(48, 15);
-            this.lbl_name.Name = "lbl_name";
-            this.lbl_name.Size = new System.Drawing.Size(116, 20);
-            this.lbl_name.TabIndex = 7;
-            this.lbl_name.Text = "JORDAN";
-            this.lbl_name.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbl_name_MouseDown);
-            // 
             // pic_minimize
             // 
             this.pic_minimize.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -114,6 +103,17 @@
             this.pic_close.TabIndex = 4;
             this.pic_close.TabStop = false;
             this.pic_close.Click += new System.EventHandler(this.pic_close_Click);
+            // 
+            // lbl_name
+            // 
+            this.lbl_name.AutoSize = true;
+            this.lbl_name.Font = new System.Drawing.Font("Akira Expanded", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_name.Location = new System.Drawing.Point(48, 15);
+            this.lbl_name.Name = "lbl_name";
+            this.lbl_name.Size = new System.Drawing.Size(116, 20);
+            this.lbl_name.TabIndex = 7;
+            this.lbl_name.Text = "JORDAN";
+            this.lbl_name.MouseDown += new System.Windows.Forms.MouseEventHandler(this.lbl_name_MouseDown);
             // 
             // pic_logo
             // 
